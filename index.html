@@ -1,0 +1,552 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <meta
+        name="description"
+        content="Create a beautiful personalized love proposal."
+    >
+
+    <title>Love Proposal ❤️</title>
+
+    <link
+        rel="stylesheet"
+        href="style.css"
+    >
+
+</head>
+
+
+<body>
+
+
+<!-- ==========================================
+     FLOATING HEARTS
+========================================== -->
+
+<div id="hearts"></div>
+
+
+<!-- ==========================================
+     MUSIC
+========================================== -->
+
+<audio
+    id="bgMusic"
+    loop
+>
+
+    <source
+        src="love-music.mp3"
+        type="audio/mpeg"
+    >
+
+</audio>
+
+
+<button
+    id="musicButton"
+    class="music-button"
+    onclick="toggleMusic()"
+>
+    🎵 Play Music
+</button>
+
+
+<!-- ==========================================
+     MAIN CONTAINER
+========================================== -->
+
+<div class="container">
+
+
+    <!-- ======================================
+         HEADER
+    ======================================= -->
+
+    <h1>
+        Love Proposal ❤️
+    </h1>
+
+    <div class="big-heart">
+        ❤️
+    </div>
+
+
+    <!-- ======================================
+         PROPOSAL FORM
+    ======================================= -->
+
+    <section class="card">
+
+        <h2>
+            Create Your Proposal 💕
+        </h2>
+
+
+        <!-- YOUR NAME -->
+
+        <label for="yourName">
+            💌 Your Name
+        </label>
+
+        <input
+            type="text"
+            id="yourName"
+            placeholder="Enter your name"
+        >
+
+
+        <!-- CRUSH NAME -->
+
+        <label for="crushName">
+            💖 Their Name
+        </label>
+
+        <input
+            type="text"
+            id="crushName"
+            placeholder="Enter their name"
+        >
+
+
+        <!-- YEARS -->
+
+        <label for="years">
+            ❤️ How many years have you loved them?
+        </label>
+
+        <input
+            type="number"
+            id="years"
+            min="0"
+            placeholder="For example: 2"
+        >
+
+
+        <!-- FIRST LOVE -->
+
+        <label for="firstLove">
+            💕 Is it your first love?
+        </label>
+
+        <select id="firstLove">
+
+            <option value="Yes">
+                Yes ❤️
+            </option>
+
+            <option value="No">
+                No
+            </option>
+
+        </select>
+
+
+        <!-- PHOTO -->
+
+        <label for="specialPhoto">
+            📸 Special Photo
+        </label>
+
+        <input
+            type="file"
+            id="specialPhoto"
+            accept="image/*"
+        >
+
+
+        <!-- PERSONAL MESSAGE -->
+
+        <label for="customMessage">
+            💌 Personal Message
+        </label>
+
+        <textarea
+            id="customMessage"
+            placeholder="Write something special..."
+        ></textarea>
+
+
+        <!-- ==================================
+             ONLINE TEMPLATE LIBRARY
+        =================================== -->
+
+        <div class="template-section">
+
+            <h2>
+                🎨 Choose a Proposal Template
+            </h2>
+
+            <p
+                id="templateStatus"
+                class="template-status"
+            >
+                Loading online templates...
+            </p>
+
+            <div
+                id="templateLibrary"
+                class="template-library"
+            ></div>
+
+        </div>
+
+
+        <!-- GENERATE -->
+
+        <button
+            type="button"
+            onclick="generateProposal()"
+        >
+            Generate Proposal ❤️
+        </button>
+
+    </section>
+
+
+    <!-- ======================================
+         LOVE SCORE
+    ======================================= -->
+
+    <section
+        id="scoreSection"
+        class="hidden"
+    >
+
+        <h2>
+            💖 Love Meter
+        </h2>
+
+        <div class="score-bar">
+
+            <div id="scoreFill">
+
+                <span id="scoreNumber">
+                    0%
+                </span>
+
+            </div>
+
+        </div>
+
+        <p id="scoreMessage"></p>
+
+    </section>
+
+
+    <!-- ======================================
+         PHOTO RESULT
+    ======================================= -->
+
+    <section
+        id="photoContainer"
+        class="hidden"
+    >
+
+        <h2>
+            📸 Your Special Photo
+        </h2>
+
+        <img
+            id="proposalPhoto"
+            alt="Special photo"
+        >
+
+    </section>
+
+
+    <!-- ======================================
+         PERSONAL MESSAGE RESULT
+    ======================================= -->
+
+    <div
+        id="customMessageDisplay"
+        class="hidden"
+    ></div>
+
+
+    <!-- ======================================
+         ENVELOPE
+    ======================================= -->
+
+    <section
+        id="envelopeSection"
+        class="hidden"
+    >
+
+        <h2>
+            💌 Your Letter Is Ready
+        </h2>
+
+        <p>
+            Tap the envelope to open your proposal.
+        </p>
+
+        <div
+            id="envelope"
+            onclick="openLetter()"
+            title="Open letter"
+        >
+            💌
+        </div>
+
+    </section>
+
+
+    <!-- ======================================
+         LETTER
+    ======================================= -->
+
+    <section
+        id="letterSection"
+        class="hidden"
+    >
+
+        <div class="letter">
+
+
+            <!-- ROSE -->
+
+            <div id="roseContainer">
+
+                <div class="rose">
+                    🌹
+                </div>
+
+                <p>
+                    A special rose for you ❤️
+                </p>
+
+            </div>
+
+
+            <!-- PHOTO WILL APPEAR ABOVE -->
+
+
+            <!-- PROPOSAL TEXT -->
+
+            <div
+                id="proposalText"
+                class="proposal-text"
+            ></div>
+
+
+            <!-- LETTER ACTIONS -->
+
+            <div class="letter-actions">
+
+                <button
+                    type="button"
+                    onclick="downloadTxt()"
+                >
+                    📥 Download
+                </button>
+
+                <button
+                    type="button"
+                    onclick="copyProposal()"
+                >
+                    📋 Copy
+                </button>
+
+                <button
+                    type="button"
+                    onclick="shareProposal()"
+                >
+                    📤 Share
+                </button>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ======================================
+         LOVE STORY
+    ======================================= -->
+
+    <section class="story-box">
+
+        <h2>
+            📖 Our Love Story
+        </h2>
+
+        <p>
+            Create a little story from your special memories. ❤️
+        </p>
+
+
+        <label for="meetPlace">
+            📍 Where did you meet?
+        </label>
+
+        <input
+            type="text"
+            id="meetPlace"
+            placeholder="For example: school"
+        >
+
+
+        <label for="favoriteMemory">
+            💭 Favorite memory
+        </label>
+
+        <textarea
+            id="favoriteMemory"
+            placeholder="Write a favorite memory..."
+        ></textarea>
+
+
+        <label for="dreamPlace">
+            🌎 A place you would love to visit
+        </label>
+
+        <input
+            type="text"
+            id="dreamPlace"
+            placeholder="For example: Paris"
+        >
+
+
+        <button
+            type="button"
+            onclick="generateLoveStory()"
+        >
+            ✨ Create Our Story
+        </button>
+
+
+        <div
+            id="loveStory"
+            class="hidden"
+        ></div>
+
+    </section>
+
+
+    <!-- ======================================
+         STARRY SKY
+    ======================================= -->
+
+    <section class="star-section">
+
+        <h2>
+            🌌 Little Star Messages
+        </h2>
+
+        <p>
+            Tap a star to reveal a message.
+        </p>
+
+
+        <div id="starSky">
+
+            <span onclick="starMessage(1)">
+                ⭐
+            </span>
+
+            <span onclick="starMessage(2)">
+                ✨
+            </span>
+
+            <span onclick="starMessage(3)">
+                ⭐
+            </span>
+
+            <span onclick="starMessage(4)">
+                🌟
+            </span>
+
+            <span onclick="starMessage(5)">
+                ✨
+            </span>
+
+            <span onclick="starMessage(6)">
+                ⭐
+            </span>
+
+
+            <div id="starMessage">
+                Tap a star ✨
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ======================================
+         FEEDBACK
+    ======================================= -->
+
+    <section class="feedback">
+
+        <h2>
+            💌 Feedback
+        </h2>
+
+        <p>
+            Tell us what you think about the website.
+        </p>
+
+
+        <textarea
+            id="feedbackText"
+            placeholder="Write your feedback..."
+        ></textarea>
+
+
+        <button
+            type="button"
+            onclick="submitFeedback()"
+        >
+            Send Feedback ❤️
+        </button>
+
+
+        <p id="feedbackMessage"></p>
+
+    </section>
+
+
+    <!-- ======================================
+         FOOTER
+    ======================================= -->
+
+    <footer>
+
+        <p>
+            Made with ❤️ for beautiful moments
+        </p>
+
+        <p>
+            Dreams of Two Hearts 💕
+        </p>
+
+    </footer>
+
+
+</div>
+
+
+<!-- ==========================================
+     JAVASCRIPT
+========================================== -->
+
+<script src="script.js"></script>
+
+
+</body>
+
+</html>
