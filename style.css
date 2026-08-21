@@ -565,47 +565,43 @@ button:hover {
 }
 
 
+/* 
 /* ==========================================
    LETTER
 ========================================== */
 
+#letterSection {
+    margin: 20px 0 !important;
+    padding: 0 !important;
+}
+
 .letter {
     background: white;
 
-    padding: 25px;
+    width: 100%;
+    height: auto;
+    min-height: 0;
 
-    border-radius: 18px;
+    padding: 20px !important;
+
+    margin: 0 auto !important;
+
+    border-radius: 15px;
 
     box-shadow:
         0 8px 20px rgba(0, 0, 0, .2);
-
-    margin-top: 20px;
-
-    animation:
-        slide 1s;
 
     text-align: center;
 
     white-space: pre-wrap;
 
-    line-height: 1.7;
-}
+    line-height: 1.6;
 
-@keyframes slide {
+    box-sizing: border-box;
 
-    from {
-        transform:
-            translateY(100px);
+    overflow: visible;
 
-        opacity: 0;
-    }
-
-    to {
-        transform:
-            translateY(0);
-
-        opacity: 1;
-    }
+    animation: slide 1s;
 }
 
 
@@ -614,41 +610,33 @@ button:hover {
 ========================================== */
 
 #roseContainer {
-    text-align: center;
+    width: 100%;
 
-    margin-bottom: 20px;
+    margin: 0 0 10px !important;
+
+    padding: 0 !important;
+
+    text-align: center;
 }
 
 .rose {
+    display: block;
+
     font-size: 65px;
 
     line-height: 1;
 
-    animation:
-        roseFloat 2s infinite alternate;
+    margin: 0 !important;
+    padding: 0 !important;
+
+    animation: roseFloat 2s infinite alternate;
 }
 
 #roseContainer p {
-    margin-top: 12px;
-
-    font-size: 18px;
+    margin: 8px 0 0 !important;
+    padding: 0 !important;
 }
-
-@keyframes roseFloat {
-
-    from {
-        transform:
-            translateY(0);
-    }
-
-    to {
-        transform:
-            translateY(-8px);
-    }
-}
-
-
-/* ==========================================
+ ==========================================
    PROPOSAL TEXT
 ========================================== */
 
