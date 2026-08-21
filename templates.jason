@@ -1,1 +1,47 @@
- 
+[
+  {
+    "id": 1,
+    "name": "Sweet Heart",
+    "category": "Romantic",
+    "icon": "❤️",
+    "preview": "#ffe4ef",
+    "theme": "pink",
+    "text": "Dear {name},\n\nYou have brought so much happiness into my life. After {years} years of knowing you, I still feel lucky every time I think about you.\n\nWill you make this beautiful story even more special?\n\nWith love,\n{yourName} ❤️"
+  },
+  {
+    "id": 2,
+    "name": "Forever Love",
+    "category": "Classic",
+    "icon": "💕",
+    "preview": "#ffd6d6",
+    "theme": "red",
+    "text": "My dear {name},\n\nSome people come into our lives and make everything brighter. You are that person for me.\n\nI would love to create many more beautiful memories with you.\n\nForever yours,\n{yourName} 💕"
+  },
+  {
+    "id": 3,
+    "name": "Starry Night",
+    "category": "Dreamy",
+    "icon": "🌟",
+    "preview": "#e6ddff",
+    "theme": "purple",
+    "text": "Dear {name},\n\nIf I could choose one person to share countless beautiful moments with, I would choose you.\n\nYou are a little bit of magic in my world.\n\nFrom,\n{yourName} ✨"
+  },
+  {
+    "id": 4,
+    "name": "Cute Proposal",
+    "category": "Cute",
+    "icon": "🥰",
+    "preview": "#ffe8c7",
+    "theme": "peach",
+    "text": "Hey {name}! ❤️\n\nYou make ordinary days feel special and simple moments feel unforgettable.\n\nSo I have one little question for you...\n\nWould you like to make more beautiful memories together?\n\n{yourName} 💖"
+  },
+  {
+    "id": 5,
+    "name": "Moonlight",
+    "category": "Dreamy",
+    "icon": "🌙",
+    "preview": "#dcd9ff",
+    "theme": "lavender",
+    "text": "Dear {name},\n\nEven on the quietest nights, you are one of my happiest thoughts.\n\nI hope we can keep making wonderful memories together.\n\nWith all my best wishes,\n{yourName} 🌙❤️"
+  }
+] 
