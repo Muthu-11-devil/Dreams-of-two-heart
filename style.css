@@ -36,8 +36,7 @@ body {
 
     overflow-y: auto;
 
-    transition:
-        background 0.5s ease;
+    transition: background .5s ease;
 }
 
 
@@ -210,15 +209,13 @@ button {
 
     cursor: pointer;
 
-    transition:
-        .3s;
+    transition: .3s;
 }
 
 button:hover {
     background: #e91e63;
 
-    transform:
-        translateY(-2px);
+    transform: translateY(-2px);
 }
 
 
@@ -334,8 +331,7 @@ button:hover {
 }
 
 .template-card:hover {
-    transform:
-        translateY(-4px);
+    transform: translateY(-4px);
 
     box-shadow:
         0 9px 18px rgba(0, 0, 0, .18);
@@ -344,8 +340,7 @@ button:hover {
 .template-card.selected {
     border-color: #e91e63;
 
-    transform:
-        scale(1.03);
+    transform: scale(1.03);
 
     box-shadow:
         0 0 0 4px
@@ -354,7 +349,7 @@ button:hover {
 
 
 /* ==========================================
-   TEMPLATE ICON
+   TEMPLATE TEXT
 ========================================== */
 
 .template-icon {
@@ -363,11 +358,6 @@ button:hover {
     margin-bottom: 8px;
 }
 
-
-/* ==========================================
-   TEMPLATE NAME
-========================================== */
-
 .template-name {
     font-weight: bold;
 
@@ -375,11 +365,6 @@ button:hover {
 
     margin-bottom: 5px;
 }
-
-
-/* ==========================================
-   TEMPLATE CATEGORY
-========================================== */
 
 .template-category {
     font-size: 12px;
@@ -539,28 +524,24 @@ button:hover {
 
     margin-top: 20px;
 
-    transition:
-        .5s;
+    transition: .5s;
 
     animation:
         envelopeFloat 2s infinite alternate;
 }
 
 #envelope:hover {
-    transform:
-        scale(1.2);
+    transform: scale(1.2);
 }
 
 @keyframes envelopeFloat {
 
     from {
-        transform:
-            translateY(0);
+        transform: translateY(0);
     }
 
     to {
-        transform:
-            translateY(-8px);
+        transform: translateY(-8px);
     }
 }
 
@@ -570,20 +551,33 @@ button:hover {
 ========================================== */
 
 #letterSection {
-    margin: 20px 0 !important;
-    padding: 0 !important;
+    margin: 20px 0;
+
+    padding: 0;
+
+    width: 100%;
+
+    height: auto;
+
+    min-height: 0;
+}
+
+#letterSection.hidden {
+    display: none !important;
 }
 
 .letter {
     background: white;
 
     width: 100%;
+
     height: auto;
+
     min-height: 0;
 
-    padding: 20px !important;
+    margin: 0 auto;
 
-    margin: 0 auto !important;
+    padding: 18px 20px;
 
     border-radius: 15px;
 
@@ -591,10 +585,6 @@ button:hover {
         0 8px 20px rgba(0, 0, 0, .2);
 
     text-align: center;
-
-    white-space: pre-wrap;
-
-    line-height: 1.6;
 
     box-sizing: border-box;
 
@@ -611,9 +601,13 @@ button:hover {
 #roseContainer {
     width: 100%;
 
-    margin: 0 0 10px !important;
+    height: auto;
 
-    padding: 0 !important;
+    min-height: 0;
+
+    margin: 0 0 8px;
+
+    padding: 0;
 
     text-align: center;
 }
@@ -621,37 +615,88 @@ button:hover {
 .rose {
     display: block;
 
-    font-size: 65px;
+    font-size: 60px;
 
     line-height: 1;
 
-    margin: 0 !important;
-    padding: 0 !important;
+    height: auto;
 
-    animation: roseFloat 2s infinite alternate;
+    margin: 0;
+
+    padding: 0;
+
+    animation:
+        roseFloat 2s infinite alternate;
 }
 
 #roseContainer p {
-    margin: 8px 0 0 !important;
-    padding: 0 !important;
+    margin: 6px 0 0;
+
+    padding: 0;
+
+    line-height: 1.4;
 }
+
 
 /* ==========================================
    PROPOSAL TEXT
 ========================================== */
 
 .proposal-text {
+    display: block;
+
+    width: 100%;
+
+    height: auto;
+
+    min-height: 0;
+
+    margin: 8px 0 0;
+
+    padding: 0;
+
     text-align: left;
 
     white-space: pre-wrap;
 
-    line-height: 1.8;
+    line-height: 1.7;
 
     font-size: 17px;
 
     color: #333;
+}
 
-    min-height: 30px;
+
+/* ==========================================
+   LETTER ANIMATION
+========================================== */
+
+@keyframes slide {
+
+    from {
+        transform:
+            translateY(80px);
+
+        opacity: 0;
+    }
+
+    to {
+        transform:
+            translateY(0);
+
+        opacity: 1;
+    }
+}
+
+@keyframes roseFloat {
+
+    from {
+        transform: translateY(0);
+    }
+
+    to {
+        transform: translateY(-8px);
+    }
 }
 
 
@@ -692,7 +737,7 @@ button:hover {
 
     gap: 10px;
 
-    margin-top: 25px;
+    margin-top: 20px;
 }
 
 .letter-actions button {
@@ -815,8 +860,7 @@ button:hover {
 }
 
 #starSky span:hover {
-    transform:
-        scale(1.4);
+    transform: scale(1.4);
 }
 
 #starMessage {
@@ -847,15 +891,13 @@ button:hover {
     from {
         opacity: .4;
 
-        transform:
-            scale(.9);
+        transform: scale(.9);
     }
 
     to {
         opacity: 1;
 
-        transform:
-            scale(1.15);
+        transform: scale(1.15);
     }
 }
 
@@ -1114,6 +1156,10 @@ body.theme-rose {
         font-size: 14px;
     }
 
+    .letter {
+        padding: 16px;
+    }
+
     .letter-actions {
         grid-template-columns:
             1fr;
@@ -1124,7 +1170,6 @@ body.theme-rose {
 
         font-size: 27px;
     }
-
 }
 
 
@@ -1150,5 +1195,4 @@ body.theme-rose {
     .rose {
         font-size: 55px;
     }
-
 }
