@@ -1,11 +1,12 @@
 /* ==========================================
    ONLINE TEMPLATE LIBRARY
 ========================================== */
-
 const TEMPLATE_URL =
     "https://raw.githubusercontent.com/Muthu-11-devil/Dreams-of-two-heart/refs/heads/main/templates.jason";
 
+
 let templates = [];
+
 let selectedTemplate = null;
 
 let proposalData = {
@@ -29,19 +30,17 @@ async function loadTemplates() {
     const status =
         document.getElementById("templateStatus");
 
-    const library =
-        document.getElementById("templateLibrary");
-
-    if (!status || !library) return;
-
     try {
 
         if (
-            !TEMPLATE_URL ||
-            TEMPLATE_URL.includes("PASTE_YOUR")
+            TEMPLATE_URL.includes(
+                "PASTE_YOUR"
+            )
         ) {
+
             status.textContent =
-                "✨ Add your online templates URL to script.js";
+                "⚠️ Add your templates.json Raw URL in script.js";
+
             return;
         }
 
@@ -49,31 +48,35 @@ async function loadTemplates() {
             await fetch(TEMPLATE_URL);
 
         if (!response.ok) {
-            throw new Error("Template request failed");
+
+            throw new Error(
+                "Template request failed"
+            );
         }
 
-        const data =
+        templates =
             await response.json();
 
-        if (!Array.isArray(data)) {
-            throw new Error("Template JSON must be an array");
-        }
+        if (!Array.isArray(templates)) {
 
-        templates = data;
+            throw new Error(
+                "Invalid template JSON"
+            );
+        }
 
         displayTemplates();
 
         status.textContent =
             "✨ " +
             templates.length +
-            " templates loaded";
+            " online templates loaded";
 
     } catch (error) {
 
-        console.error("Template error:", error);
+        console.error(error);
 
         status.textContent =
-            "⚠️ Could not load templates.";
+            "⚠️ Could not load online templates.";
     }
 }
 
@@ -85,33 +88,26 @@ async function loadTemplates() {
 function displayTemplates() {
 
     const library =
-        document.getElementById("templateLibrary");
-
-    if (!library) return;
+        document.getElementById(
+            "templateLibrary"
+        );
 
     library.innerHTML = "";
 
-    if (!templates.length) {
-
-        library.innerHTML =
-            "<p>No templates available.</p>";
-
-        return;
-    }
-
-    templates.forEach(function(template, index) {
+    templates.forEach(function(template) {
 
         const card =
             document.createElement("div");
 
-        card.className = "template-card";
+        card.className =
+            "template-card";
 
         card.dataset.id =
-            template.id ?? index;
+            template.id;
 
         card.innerHTML = `
             <div class="template-icon">
-                ${template.icon || "💖"}
+                ${template.icon || "❤️"}
             </div>
 
             <div class="template-name">
@@ -123,20 +119,17 @@ function displayTemplates() {
             </div>
         `;
 
-        if (template.preview) {
-            card.style.background =
-                template.preview;
-        }
+        card.style.background =
+            template.preview ||
+            "#fff0f6";
 
-        card.addEventListener(
-            "click",
+        card.onclick =
             function() {
 
                 selectTemplate(
-                    template.id ?? index
+                    template.id
                 );
-            }
-        );
+            };
 
         library.appendChild(card);
     });
@@ -150,29 +143,35 @@ function displayTemplates() {
 function selectTemplate(id) {
 
     selectedTemplate =
-        templates.find(function(template, index) {
+        templates.find(function(template) {
 
-            return (
-                (template.id ?? index) == id
-            );
-
+            return template.id === id;
         });
+
 
     document
         .querySelectorAll(".template-card")
         .forEach(function(card) {
 
-            card.classList.remove("selected");
+            card.classList.remove(
+                "selected"
+            );
         });
+
 
     const selected =
         document.querySelector(
             `.template-card[data-id="${id}"]`
         );
 
+
     if (selected) {
-        selected.classList.add("selected");
+
+        selected.classList.add(
+            "selected"
+        );
     }
+
 
     if (selectedTemplate) {
 
@@ -209,6 +208,7 @@ function applyTemplateTheme(theme) {
         );
     });
 
+
     if (themes.includes(theme)) {
 
         document.body.classList.add(
@@ -225,12 +225,25 @@ function applyTemplateTheme(theme) {
 function toggleMusic() {
 
     const music =
-        document.getElementById("bgMusic");
+        document.getElementById(
+            "bgMusic"
+        );
 
     const button =
-        document.getElementById("musicButton");
+        document.getElementById(
+            "musicButton"
+        );
 
-    if (!music || !button) return;
+
+    if (!music) {
+
+        alert(
+            "Music player was not found."
+        );
+
+        return;
+    }
+
 
     if (music.paused) {
 
@@ -241,10 +254,18 @@ function toggleMusic() {
                     "⏸️ Pause Music";
 
             })
-            .catch(function() {
+            .catch(function(error) {
+
+                console.error(
+                    "Music playback error:",
+                    error
+                );
+
+                button.textContent =
+                    "🎵 Play Music";
 
                 alert(
-                    "Tap the music button again to start the music."
+                    "Music could not play. Make sure music.mp3 is a real MP3 file in your GitHub repository."
                 );
             });
 
@@ -265,24 +286,30 @@ function toggleMusic() {
 function generateProposal() {
 
     const yourName =
-        document.getElementById("yourName")
-            ?.value.trim();
+        document.getElementById(
+            "yourName"
+        ).value.trim();
 
     const crushName =
-        document.getElementById("crushName")
-            ?.value.trim();
+        document.getElementById(
+            "crushName"
+        ).value.trim();
 
     const years =
-        document.getElementById("years")
-            ?.value.trim();
+        document.getElementById(
+            "years"
+        ).value.trim();
 
     const firstLove =
-        document.getElementById("firstLove")
-            ?.value || "";
+        document.getElementById(
+            "firstLove"
+        ).value;
 
     const customMessage =
-        document.getElementById("customMessage")
-            ?.value.trim();
+        document.getElementById(
+            "customMessage"
+        ).value.trim();
+
 
     if (!yourName || !crushName) {
 
@@ -293,6 +320,7 @@ function generateProposal() {
         return;
     }
 
+
     if (!selectedTemplate) {
 
         alert(
@@ -301,6 +329,7 @@ function generateProposal() {
 
         return;
     }
+
 
     proposalData.yourName =
         yourName;
@@ -315,75 +344,79 @@ function generateProposal() {
         firstLove;
 
     proposalData.customMessage =
-        customMessage || "";
+        customMessage;
+
 
     proposalData.proposalText =
         buildProposalText();
 
+
     handlePhoto();
+
 
     const message =
         document.getElementById(
             "customMessageDisplay"
         );
 
-    if (message) {
 
-        if (customMessage) {
+    if (customMessage) {
 
-            message.textContent =
-                customMessage;
+        message.textContent =
+            customMessage;
 
-            message.classList.remove(
-                "hidden"
-            );
+        message.classList.remove(
+            "hidden"
+        );
 
-        } else {
+    } else {
 
-            message.classList.add(
-                "hidden"
-            );
-        }
+        message.classList.add(
+            "hidden"
+        );
     }
 
-    const scoreSection =
-        document.getElementById(
+
+    document
+        .getElementById(
             "scoreSection"
+        )
+        .classList.remove(
+            "hidden"
         );
 
-    const envelopeSection =
-        document.getElementById(
+
+    document
+        .getElementById(
             "envelopeSection"
+        )
+        .classList.remove(
+            "hidden"
         );
 
-    const letterSection =
-        document.getElementById(
+
+    document
+        .getElementById(
             "letterSection"
+        )
+        .classList.add(
+            "hidden"
         );
 
-    if (scoreSection) {
-        scoreSection.classList.remove("hidden");
-    }
-
-    if (envelopeSection) {
-        envelopeSection.classList.remove("hidden");
-    }
-
-    if (letterSection) {
-        letterSection.classList.add("hidden");
-    }
 
     animateLoveMeter();
 
+
     setTimeout(function() {
 
-        if (scoreSection) {
-
-            scoreSection.scrollIntoView({
+        document
+            .getElementById(
+                "scoreSection"
+            )
+            .scrollIntoView({
                 behavior: "smooth",
                 block: "center"
             });
-        }
 
     }, 200);
 }
@@ -395,12 +428,13 @@ function generateProposal() {
 
 function buildProposalText() {
 
-    if (!selectedTemplate) {
-        return "";
-    }
+    const template =
+        selectedTemplate;
+
 
     let text =
-        selectedTemplate.text || "";
+        template.text || "";
+
 
     text =
         text.replace(
@@ -408,11 +442,13 @@ function buildProposalText() {
             proposalData.crushName
         );
 
+
     text =
         text.replace(
             /\{yourName\}/g,
             proposalData.yourName
         );
+
 
     text =
         text.replace(
@@ -420,13 +456,16 @@ function buildProposalText() {
             proposalData.years
         );
 
+
     if (
         proposalData.firstLove === "Yes"
     ) {
 
         text +=
-            "\n\nThis moment is especially meaningful to me. ❤️";
+            "\n\nAnd yes... this is my first love, " +
+            "which makes this moment even more special. ❤️";
     }
+
 
     return text;
 }
@@ -453,24 +492,27 @@ function handlePhoto() {
             "proposalPhoto"
         );
 
-    if (!input || !container || !image) {
-        return;
-    }
 
     if (
         !input.files ||
         !input.files[0]
     ) {
 
-        container.classList.add("hidden");
+        container.classList.add(
+            "hidden"
+        );
 
-        image.removeAttribute("src");
+        image.removeAttribute(
+            "src"
+        );
 
         return;
     }
 
+
     const reader =
         new FileReader();
+
 
     reader.onload =
         function(event) {
@@ -482,6 +524,7 @@ function handlePhoto() {
                 "hidden"
             );
         };
+
 
     reader.readAsDataURL(
         input.files[0]
@@ -510,19 +553,22 @@ function animateLoveMeter() {
             "scoreMessage"
         );
 
-    if (!fill || !number || !message) {
-        return;
-    }
 
     const score =
         Math.floor(
             Math.random() * 11
         ) + 90;
 
-    fill.style.width = "0%";
-    number.textContent = "0%";
+
+    fill.style.width =
+        "0%";
+
+    number.textContent =
+        "0%";
+
 
     let current = 0;
+
 
     const timer =
         setInterval(function() {
@@ -534,6 +580,7 @@ function animateLoveMeter() {
 
             number.textContent =
                 current + "%";
+
 
             if (current >= score) {
 
@@ -563,19 +610,24 @@ function openLetter() {
             "proposalText"
         );
 
-    if (!section || !text) return;
 
-    section.classList.remove("hidden");
+    section.classList.remove(
+        "hidden"
+    );
 
-    text.textContent = "";
+
+    text.textContent =
+        "";
 
     text.classList.add(
         "typing-cursor"
     );
 
+
     typeProposal(
         proposalData.proposalText
     );
+
 
     setTimeout(function() {
 
@@ -599,7 +651,6 @@ function typeProposal(text) {
             "proposalText"
         );
 
-    if (!element) return;
 
     if (typingTimer) {
 
@@ -608,7 +659,9 @@ function typeProposal(text) {
         );
     }
 
+
     let index = 0;
+
 
     function typeNext() {
 
@@ -621,12 +674,15 @@ function typeProposal(text) {
             return;
         }
 
+
         element.textContent +=
             text.charAt(index);
 
         index++;
 
+
         let delay = 24;
+
 
         if (
             text.charAt(index - 1) === "." ||
@@ -637,12 +693,14 @@ function typeProposal(text) {
             delay = 100;
         }
 
+
         typingTimer =
             setTimeout(
                 typeNext,
                 delay
             );
     }
+
 
     typeNext();
 }
@@ -657,24 +715,23 @@ function generateLoveStory() {
     const meet =
         document.getElementById(
             "meetPlace"
-        )?.value.trim();
+        ).value.trim();
 
     const memory =
         document.getElementById(
             "favoriteMemory"
-        )?.value.trim();
+        ).value.trim();
 
     const dream =
         document.getElementById(
             "dreamPlace"
-        )?.value.trim();
+        ).value.trim();
 
     const story =
         document.getElementById(
             "loveStory"
         );
 
-    if (!story) return;
 
     if (!meet && !memory && !dream) {
 
@@ -685,8 +742,10 @@ function generateLoveStory() {
         return;
     }
 
+
     let result =
         "✨ Our Little Love Story ✨\n\n";
+
 
     if (meet) {
 
@@ -696,6 +755,7 @@ function generateLoveStory() {
             ". ";
     }
 
+
     if (memory) {
 
         result +=
@@ -704,18 +764,23 @@ function generateLoveStory() {
             ". ";
     }
 
+
     if (dream) {
 
         result +=
             "Maybe one day, we can create " +
-            "another beautiful memory together at " +
+            "another beautiful memory together " +
+            "at " +
             dream +
             ". ";
     }
 
+
     result +=
-        "\n\nSome stories become special because " +
-        "of the people who are part of them. ❤️";
+        "\n\nSome stories become special " +
+        "because of the people who are part " +
+        "of them. ❤️";
+
 
     story.textContent =
         result;
@@ -753,17 +818,11 @@ function starMessage(number) {
             "⭐ Some feelings shine brighter than stars."
     };
 
-    const output =
-        document.getElementById(
-            "starMessage"
-        );
 
-    if (output) {
-
-        output.textContent =
-            messages[number] ||
-            "✨ A little message just for you.";
-    }
+    document.getElementById(
+        "starMessage"
+    ).textContent =
+        messages[number];
 }
 
 
@@ -782,9 +841,11 @@ function downloadTxt() {
         return;
     }
 
+
     let text =
         "💕 LOVE PROPOSAL 💕\n\n" +
         proposalData.proposalText;
+
 
     if (proposalData.customMessage) {
 
@@ -792,6 +853,7 @@ function downloadTxt() {
             "\n\n💌 Personal Message:\n\n" +
             proposalData.customMessage;
     }
+
 
     const blob =
         new Blob(
@@ -802,16 +864,21 @@ function downloadTxt() {
             }
         );
 
+
     const url =
         URL.createObjectURL(blob);
+
 
     const link =
         document.createElement("a");
 
-    link.href = url;
+
+    link.href =
+        url;
 
     link.download =
         "love-proposal.txt";
+
 
     document.body.appendChild(link);
 
@@ -838,8 +905,10 @@ function copyProposal() {
         return;
     }
 
+
     let text =
         proposalData.proposalText;
+
 
     if (proposalData.customMessage) {
 
@@ -847,6 +916,7 @@ function copyProposal() {
             "\n\n" +
             proposalData.customMessage;
     }
+
 
     if (
         navigator.clipboard &&
@@ -860,29 +930,50 @@ function copyProposal() {
                 alert(
                     "Proposal copied! 💕"
                 );
+
+            })
+            .catch(function() {
+
+                fallbackCopy(text);
+
             });
 
     } else {
 
-        const area =
-            document.createElement(
-                "textarea"
-            );
-
-        area.value = text;
-
-        document.body.appendChild(area);
-
-        area.select();
-
-        document.execCommand("copy");
-
-        area.remove();
-
-        alert(
-            "Proposal copied! 💕"
-        );
+        fallbackCopy(text);
     }
+}
+
+
+/* ==========================================
+   FALLBACK COPY
+========================================== */
+
+function fallbackCopy(text) {
+
+    const area =
+        document.createElement(
+            "textarea"
+        );
+
+    area.value =
+        text;
+
+    document.body.appendChild(
+        area
+    );
+
+    area.select();
+
+    document.execCommand(
+        "copy"
+    );
+
+    area.remove();
+
+    alert(
+        "Proposal copied! 💕"
+    );
 }
 
 
@@ -900,6 +991,7 @@ function shareProposal() {
 
         return;
     }
+
 
     if (navigator.share) {
 
@@ -936,7 +1028,6 @@ function submitFeedback() {
             "feedbackMessage"
         );
 
-    if (!input || !message) return;
 
     if (!input.value.trim()) {
 
@@ -945,6 +1036,7 @@ function submitFeedback() {
 
         return;
     }
+
 
     message.textContent =
         "Thank you for your feedback! 💕";
@@ -964,10 +1056,17 @@ function createFloatingHeart() {
             "hearts"
         );
 
-    if (!container) return;
+
+    if (!container) {
+        return;
+    }
+
 
     const heart =
-        document.createElement("div");
+        document.createElement(
+            "div"
+        );
+
 
     const symbols = [
         "❤️",
@@ -977,8 +1076,10 @@ function createFloatingHeart() {
         "💓"
     ];
 
+
     heart.className =
         "floating-heart";
+
 
     heart.textContent =
         symbols[
@@ -988,20 +1089,27 @@ function createFloatingHeart() {
             )
         ];
 
+
     heart.style.left =
         Math.random() * 100 + "%";
+
 
     heart.style.fontSize =
         15 +
         Math.random() * 20 +
         "px";
 
+
     heart.style.animationDuration =
         4 +
         Math.random() * 4 +
         "s";
 
-    container.appendChild(heart);
+
+    container.appendChild(
+        heart
+    );
+
 
     setTimeout(function() {
 
@@ -1021,26 +1129,10 @@ document.addEventListener(
 
         loadTemplates();
 
-        const musicButton =
-            document.getElementById(
-                "musicButton"
-            );
-
-        if (musicButton) {
-
-            musicButton.addEventListener(
-                "click",
-                toggleMusic
-            );
-        }
+        setInterval(
+            createFloatingHeart,
+            900
+        );
 
     }
 );
-
-
-/* Floating hearts */
-
-setInterval(
-    createFloatingHeart,
-    900
-); 
