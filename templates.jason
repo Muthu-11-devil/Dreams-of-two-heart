@@ -1,47 +1,677 @@
 [
   {
     "id": 1,
-    "name": "Sweet Heart",
-    "category": "Romantic",
-    "icon": "❤️",
-    "preview": "#ffe4ef",
+    "name": "Sweet Beginning",
+    "category": "Sweet",
+    "icon": "💕",
+    "preview": "#ffd6e8",
     "theme": "pink",
-    "text": "Dear {name},\n\nYou have brought so much happiness into my life. After {years} years of knowing you, I still feel lucky every time I think about you.\n\nWill you make this beautiful story even more special?\n\nWith love,\n{yourName} ❤️"
+    "text": "Dear {name},\n\nThere is something I have wanted to tell you for a while. Somehow, you have become one of the most special people in my life. The little conversations, the smiles, and the simple moments we share mean more to me than you probably realize.\n\nFor the past {years}, my feelings have continued to grow. I don't know exactly when it happened, but somewhere along the way, you became someone I look forward to seeing and talking to every day.\n\nI don't want to keep these feelings hidden anymore. I simply want to be honest with you and tell you how much you mean to me.\n\nWould you give me a chance to create something beautiful together?\n\nWith love,\n{yourName} ❤️"
   },
   {
     "id": 2,
-    "name": "Forever Love",
-    "category": "Classic",
-    "icon": "💕",
-    "preview": "#ffd6d6",
-    "theme": "red",
-    "text": "My dear {name},\n\nSome people come into our lives and make everything brighter. You are that person for me.\n\nI would love to create many more beautiful memories with you.\n\nForever yours,\n{yourName} 💕"
+    "name": "From My Heart",
+    "category": "Heartfelt",
+    "icon": "❤️",
+    "preview": "#ffc1d9",
+    "theme": "rose",
+    "text": "Dear {name},\n\nSometimes words are difficult when the feeling behind them is so big. Still, today I want to try.\n\nFor {years}, you have slowly become a beautiful part of my thoughts and memories. Your presence has a way of making ordinary days feel a little more meaningful.\n\nI admire the person you are, and I treasure every little moment that has brought us closer. I don't expect a perfect story. I only hope for a chance to begin one.\n\nSo here I am, being completely honest with you: I care about you deeply, and I would love to know if you feel something similar.\n\nAlways,\n{yourName} 💖"
   },
   {
     "id": 3,
-    "name": "Starry Night",
-    "category": "Dreamy",
-    "icon": "🌟",
-    "preview": "#e6ddff",
-    "theme": "purple",
-    "text": "Dear {name},\n\nIf I could choose one person to share countless beautiful moments with, I would choose you.\n\nYou are a little bit of magic in my world.\n\nFrom,\n{yourName} ✨"
+    "name": "Little Secret",
+    "category": "Cute",
+    "icon": "🤫",
+    "preview": "#ffe0ec",
+    "theme": "pink",
+    "text": "Hey {name},\n\nI have a little secret that probably isn't much of a secret anymore.\n\nFor {years}, I have found myself smiling whenever your name appears, remembering little things you said, and looking forward to the moments when we get to talk.\n\nMaybe I should have said this earlier, but I wanted to find the right moment. And maybe this is that moment.\n\nThe truth is simple: I really, really like you.\n\nI don't know where this story could go, but I would love to find out together.\n\nFrom,\n{yourName} 💕"
   },
   {
     "id": 4,
-    "name": "Cute Proposal",
-    "category": "Cute",
-    "icon": "🥰",
-    "preview": "#ffe8c7",
+    "name": "A Beautiful Memory",
+    "category": "Memories",
+    "icon": "🌸",
+    "preview": "#ffe8f0",
     "theme": "peach",
-    "text": "Hey {name}! ❤️\n\nYou make ordinary days feel special and simple moments feel unforgettable.\n\nSo I have one little question for you...\n\nWould you like to make more beautiful memories together?\n\n{yourName} 💖"
+    "text": "Dear {name},\n\nWhen I think about the memories I have collected over the years, some moments stand out more than others. Somehow, so many of my favorite memories have you somewhere inside them.\n\nFor {years}, getting to know you has made ordinary moments feel special. A simple conversation can become something I remember for the rest of the day.\n\nThat is what makes you different. You don't have to do anything extraordinary to make a moment meaningful.\n\nI hope we can create many more memories together.\n\nWould you like to begin that next chapter with me?\n\n{yourName} 🌷"
   },
   {
     "id": 5,
-    "name": "Moonlight",
+    "name": "Dreamy Confession",
     "category": "Dreamy",
     "icon": "🌙",
-    "preview": "#dcd9ff",
+    "preview": "#ddd0ff",
     "theme": "lavender",
-    "text": "Dear {name},\n\nEven on the quietest nights, you are one of my happiest thoughts.\n\nI hope we can keep making wonderful memories together.\n\nWith all my best wishes,\n{yourName} 🌙❤️"
+    "text": "Dear {name},\n\nSometimes I imagine all the little possibilities that life can bring. Among all those possibilities, there is one I keep coming back to: the possibility of having you beside me.\n\nFor {years}, my feelings have quietly grown. What started as a small feeling became something I could no longer ignore.\n\nYou have become a beautiful thought that appears in the middle of ordinary days and a reason for many unexpected smiles.\n\nI don't know what tomorrow holds, but I know what I hope for.\n\nI hope there is a tomorrow where we get to create something meaningful together.\n\nWith hope,\n{yourName} ✨"
+  },
+  {
+    "id": 6,
+    "name": "Forever Smile",
+    "category": "Cute",
+    "icon": "😊",
+    "preview": "#fff0b8",
+    "theme": "gold",
+    "text": "Dear {name},\n\nYou have a talent for making me smile without even trying.\n\nFor {years}, there have been countless little moments when simply seeing you or talking to you has made my day better.\n\nI don't need some huge dramatic reason to care about you. Sometimes the smallest things are the reasons someone becomes important.\n\nYour smile, your personality, and the way you make ordinary moments memorable are all things I appreciate about you.\n\nSo here is my simple question: would you let me be someone who gets to make you smile too?\n\n{yourName} 😊❤️"
+  },
+  {
+    "id": 7,
+    "name": "Moonlight Letter",
+    "category": "Poetic",
+    "icon": "🌙",
+    "preview": "#b9b0ff",
+    "theme": "purple",
+    "text": "Dear {name},\n\nIf feelings were stars, I think the sky would be full of them by now.\n\nFor {years}, little by little, you have become one of the brightest thoughts in my mind. Like a quiet light during an ordinary night, you have a way of making everything feel a little warmer.\n\nI don't need a perfect moment or a perfect sentence. I only need the courage to tell you what my heart already knows.\n\nYou are special to me.\n\nAnd if you are willing, I would love to see where our story could lead.\n\nUnder the same moon,\n{yourName} 🌙❤️"
+  },
+  {
+    "id": 8,
+    "name": "The Honest One",
+    "category": "Honest",
+    "icon": "💌",
+    "preview": "#ffd1dc",
+    "theme": "rose",
+    "text": "Dear {name},\n\nI am going to keep this simple because sometimes honesty is better than trying to find perfect words.\n\nI like you. I care about you. And over {years}, those feelings have become stronger than I expected.\n\nYou have become someone I genuinely appreciate having in my life. I value our conversations, our memories, and every little moment we share.\n\nI don't know what your answer will be, and I don't want to put pressure on you. I simply wanted you to know how I feel.\n\nWhatever happens, I'm grateful that I got the courage to tell you.\n\n{yourName} ❤️"
+  },
+  {
+    "id": 9,
+    "name": "My Favorite Person",
+    "category": "Sweet",
+    "icon": "🥰",
+    "preview": "#ffe2ed",
+    "theme": "pink",
+    "text": "Dear {name},\n\nSome people enter our lives and somehow become impossible not to notice.\n\nYou became that person for me.\n\nFor {years}, I have watched our little moments turn into memories that I genuinely treasure. Somewhere along the way, you became one of my favorite people to talk to, think about, and spend time with.\n\nI hope you know how much your presence can brighten someone's day.\n\nFor me, that someone is you.\n\nWould you let me be part of more of your story?\n\n{yourName} 💕"
+  },
+  {
+    "id": 10,
+    "name": "One Simple Question",
+    "category": "Simple",
+    "icon": "❓",
+    "preview": "#ffd6d6",
+    "theme": "red",
+    "text": "Dear {name},\n\nI could write a hundred paragraphs, but everything eventually comes down to one simple feeling.\n\nFor {years}, I have cared about you more and more. You have become someone I truly value, and I don't want to keep pretending that my feelings are just a passing thought.\n\nYou make my days brighter in ways you probably don't realize.\n\nSo after all these words, there is only one thing left to ask.\n\nWould you give me a chance?\n\nWith hope,\n{yourName} ❤️"
+  },
+  {
+    "id": 11,
+    "name": "Sunshine",
+    "category": "Happy",
+    "icon": "☀️",
+    "preview": "#ffe7a3",
+    "theme": "gold",
+    "text": "Dear {name},\n\nSome people feel like sunshine. They make a normal day brighter simply by being there.\n\nYou are that kind of person to me.\n\nFor {years}, your presence has brought countless little moments of happiness into my life. A conversation with you can change my mood, and a simple smile from you can stay in my thoughts for hours.\n\nI hope one day I can return even a little of the happiness you have given me.\n\nMaybe that can be the beginning of something beautiful.\n\n{yourName} ☀️💕"
+  },
+  {
+    "id": 12,
+    "name": "Rainy Day Feelings",
+    "category": "Soft",
+    "icon": "🌧️",
+    "preview": "#cce8ff",
+    "theme": "blue",
+    "text": "Dear {name},\n\nThere are some feelings that arrive quietly, like rain against a window. You don't notice the first few drops, and then suddenly everything is covered in them.\n\nThat is how my feelings for you grew.\n\nOver {years}, little moments slowly became something much bigger. Your kindness, your smile, and the way you make conversations feel easy have all stayed with me.\n\nI don't know what the future will bring, but I would love to discover it one step at a time with you.\n\nFrom my heart,\n{yourName} 💙"
+  },
+  {
+    "id": 13,
+    "name": "Tiny Moments",
+    "category": "Memories",
+    "icon": "✨",
+    "preview": "#f4dcff",
+    "theme": "lavender",
+    "text": "Dear {name},\n\nIt is funny how the smallest moments can become the memories we treasure most.\n\nA short conversation. A shared laugh. A simple hello. A moment that seemed ordinary at the time.\n\nFor {years}, those little moments with you have slowly become some of my favorite memories.\n\nThey made me realize that I don't need something huge to know that someone matters to me.\n\nYou matter to me.\n\nAnd I would love the chance to create many more tiny moments together.\n\n{yourName} ✨"
+  },
+  {
+    "id": 14,
+    "name": "My Favorite Chapter",
+    "category": "Story",
+    "icon": "📖",
+    "preview": "#ffe4d6",
+    "theme": "peach",
+    "text": "Dear {name},\n\nIf my life were a book, there would be many chapters I could talk about. But somehow, the chapters that include you are the ones I remember most clearly.\n\nFor {years}, our story has slowly developed through conversations, memories, and little moments.\n\nI don't know what the next chapter should say. Maybe that is the exciting part.\n\nI would love to turn the page and discover it together.\n\nSo, {name}, would you like to be part of my next chapter?\n\nWith love,\n{yourName} 📖❤️"
+  },
+  {
+    "id": 15,
+    "name": "Quiet Feelings",
+    "category": "Emotional",
+    "icon": "🌷",
+    "preview": "#ffe0e8",
+    "theme": "rose",
+    "text": "Dear {name},\n\nNot every feeling arrives loudly. Some feelings grow quietly, little by little, until you finally realize how important someone has become.\n\nThat happened to me with you.\n\nFor {years}, I have watched my feelings grow through ordinary moments and unexpected memories.\n\nI didn't plan for it. I didn't expect it. But I am grateful for it.\n\nYou have become someone I genuinely care about, and I wanted you to know.\n\nMaybe our quiet beginning can become something beautiful.\n\n{yourName} 🌷"
+  },
+  {
+    "id": 16,
+    "name": "The Smile Letter",
+    "category": "Cute",
+    "icon": "😁",
+    "preview": "#ffe8b6",
+    "theme": "gold",
+    "text": "Dear {name},\n\nI think your smile deserves its own paragraph.\n\nThere is something about seeing you smile that makes everything feel lighter. For {years}, I have noticed how easily you can turn an ordinary moment into a good one.\n\nMaybe you don't realize how much that means.\n\nI hope I can become someone who gives you reasons to smile too.\n\nI care about you more than I can fit into one little letter, but I hope these words are enough to help you understand.\n\nWould you let me try?\n\n{yourName} 😊❤️"
+  },
+  {
+    "id": 17,
+    "name": "A Thousand Thoughts",
+    "category": "Deep",
+    "icon": "💭",
+    "preview": "#e1d4ff",
+    "theme": "purple",
+    "text": "Dear {name},\n\nThere are probably a thousand thoughts I could write here, but they all seem to lead back to the same person: you.\n\nFor {years}, you have appeared in my thoughts during the most random moments. A song, a place, a joke, or even something completely ordinary can remind me of you.\n\nThat is when I realized you are not just a passing thought anymore. You have become a meaningful part of my life.\n\nI hope I can become a meaningful part of yours too.\n\nWith all my thoughts,\n{yourName} 💭💕"
+  },
+  {
+    "id": 18,
+    "name": "A Little Courage",
+    "category": "Brave",
+    "icon": "🦋",
+    "preview": "#d8f5ff",
+    "theme": "blue",
+    "text": "Dear {name},\n\nWriting this takes a little courage because telling someone how you feel can be scary.\n\nBut after {years}, I decided that some feelings are worth being honest about.\n\nI care about you. I enjoy being around you. I appreciate the little things about you that make you different from everyone else.\n\nI don't know what your answer will be, and that's okay. I just wanted to be brave enough to tell you the truth.\n\nMaybe this can be the beginning of something wonderful.\n\n{yourName} 🦋❤️"
+  },
+  {
+    "id": 19,
+    "name": "If I Could Choose",
+    "category": "Romantic",
+    "icon": "🌹",
+    "preview": "#ffd0d8",
+    "theme": "red",
+    "text": "Dear {name},\n\nIf I could choose one person to share more memories, conversations, laughs, and ordinary days with, I already know who I would choose.\n\nYou.\n\nFor {years}, you have become someone incredibly special to me. I appreciate the person you are and the happiness you bring into my life.\n\nI don't need a perfect future. I just want a chance to build something genuine, one moment at a time.\n\nIf you are willing, I would love for that person to be you.\n\n{yourName} 🌹"
+  },
+  {
+    "id": 20,
+    "name": "A Letter in Pink",
+    "category": "Classic",
+    "icon": "💗",
+    "preview": "#ffc8dc",
+    "theme": "pink",
+    "text": "Dear {name},\n\nThis little pink letter carries something I have been wanting to say.\n\nFor {years}, you have slowly become someone who means a great deal to me. Your presence makes ordinary days feel different, and your smile has become one of my favorite sights.\n\nI treasure the moments we have shared, and I hope there can be many more.\n\nI am not asking for a perfect story. I am simply asking whether you would like to begin writing one with me.\n\nWith a hopeful heart,\n{yourName} 💗"
+  },
+  {
+    "id": 21,
+    "name": "Starry Confession",
+    "category": "Dreamy",
+    "icon": "⭐",
+    "preview": "#c9c2ff",
+    "theme": "night",
+    "text": "Dear {name},\n\nIf every star represented one reason I appreciate you, I think the night sky would never be big enough.\n\nFor {years}, my feelings have grown quietly but steadily. You have become one of those rare people whose presence can make an ordinary day feel special.\n\nI don't know what our future looks like, but I know I would like the chance to discover it.\n\nMaybe our story can become one of those memories we look back on and smile about.\n\nUntil then, know that you are incredibly special to me.\n\n{yourName} ⭐❤️"
+  },
+  {
+    "id": 22,
+    "name": "The Little Things",
+    "category": "Sweet",
+    "icon": "🌼",
+    "preview": "#fff0c7",
+    "theme": "gold",
+    "text": "Dear {name},\n\nIt isn't one huge thing that made me care about you. It is all the little things.\n\nThe way you talk. The way you laugh. The way you treat people. The little moments that probably don't seem important to you but somehow stay in my mind.\n\nFor {years}, those little things have added up to something much bigger.\n\nThey made me realize just how special you are to me.\n\nI hope I can spend more time discovering all those little things that make you who you are.\n\n{yourName} 🌼💕"
+  },
+  {
+    "id": 23,
+    "name": "Our Possible Story",
+    "category": "Future",
+    "icon": "📚",
+    "preview": "#e5d8ff",
+    "theme": "lavender",
+    "text": "Dear {name},\n\nEvery great story starts with a beginning, but nobody knows exactly where it will end.\n\nMaybe that is what makes stories exciting.\n\nFor {years}, I have been lucky enough to have you as part of my life. Now I find myself wondering what could happen if we chose to create more memories together.\n\nMaybe there could be new places, new jokes, new adventures, and countless ordinary days that become special simply because we shared them.\n\nWould you like to see what our next chapter could become?\n\n{yourName} 📚❤️"
+  },
+  {
+    "id": 24,
+    "name": "Warm Coffee Feelings",
+    "category": "Cozy",
+    "icon": "☕",
+    "preview": "#f5d7c0",
+    "theme": "peach",
+    "text": "Dear {name},\n\nSome feelings remind me of a warm cup of coffee on a quiet day. They are comforting, familiar, and somehow make everything feel better.\n\nThat is how I feel when I think about you.\n\nFor {years}, you have become someone whose presence feels genuinely special to me.\n\nI would love more conversations, more laughs, and more simple moments with you.\n\nMaybe we could create our own collection of cozy little memories.\n\nWhat do you think?\n\n{yourName} ☕💕"
+  },
+  {
+    "id": 25,
+    "name": "Garden of Feelings",
+    "category": "Poetic",
+    "icon": "🌺",
+    "preview": "#ffd8e5",
+    "theme": "rose",
+    "text": "Dear {name},\n\nFeelings are a little like flowers. They begin quietly, need time to grow, and become beautiful when cared for.\n\nFor {years}, something inside me has been growing whenever I think about you.\n\nEvery conversation has felt like another little flower, every memory another color in the garden.\n\nNow I finally have the courage to show you the garden I have been carrying in my heart.\n\nYou are very special to me, and I hope we can let something beautiful grow between us.\n\n{yourName} 🌺"
+  },
+  {
+    "id": 26,
+    "name": "No Perfect Words",
+    "category": "Honest",
+    "icon": "📝",
+    "preview": "#ffdede",
+    "theme": "red",
+    "text": "Dear {name},\n\nI have rewritten this message in my head so many times, trying to find the perfect words.\n\nBut maybe there are no perfect words.\n\nSo I will simply say what I feel.\n\nFor {years}, you have become someone I genuinely care about. You make me smile, you make ordinary moments memorable, and you have a place in my thoughts that nobody else has.\n\nI hope these imperfect words are enough to tell you something very real.\n\nI like you, {name}. ❤️\n\n{yourName}"
+  },
+  {
+    "id": 27,
+    "name": "Beautiful Accident",
+    "category": "Story",
+    "icon": "🍀",
+    "preview": "#d8f5d8",
+    "theme": "green",
+    "text": "Dear {name},\n\nSometimes the best things in life are the things we never planned.\n\nMeeting you feels like one of those beautiful surprises.\n\nFor {years}, our connection has grown through little conversations, shared moments, and memories I genuinely treasure.\n\nI never expected someone to become this important to me, but I am grateful that it happened.\n\nMaybe the next beautiful surprise could be discovering what we might become together.\n\nWith a grateful heart,\n{yourName} 🍀❤️"
+  },
+  {
+    "id": 28,
+    "name": "You Make Days Better",
+    "category": "Cute",
+    "icon": "🌈",
+    "preview": "#d9f3ff",
+    "theme": "blue",
+    "text": "Dear {name},\n\nSome days are ordinary. Some are difficult. And then there are days when you appear and somehow everything feels a little better.\n\nFor {years}, I have noticed how much happier I feel when I get to spend time with you or even have a simple conversation.\n\nYou have a way of making ordinary moments feel brighter.\n\nI hope someday I can do the same for you.\n\nWould you let me try?\n\n{yourName} 🌈💕"
+  },
+  {
+    "id": 29,
+    "name": "The Memory Keeper",
+    "category": "Memories",
+    "icon": "📷",
+    "preview": "#ffe5d6",
+    "theme": "peach",
+    "text": "Dear {name},\n\nIf I could keep every memory that made me smile, I know many of them would have something to do with you.\n\nFor {years}, you have been part of moments that I will always remember fondly.\n\nSometimes I wish I could pause those moments and keep them forever.\n\nBut maybe the better idea is to create more.\n\nMore conversations. More laughs. More adventures. More memories that we can look back on someday.\n\nI would love that.\n\n{yourName} 📷❤️"
+  },
+  {
+    "id": 30,
+    "name": "A Soft Confession",
+    "category": "Soft",
+    "icon": "🩷",
+    "preview": "#ffe3ee",
+    "theme": "pink",
+    "text": "Dear {name},\n\nI don't want to make this complicated.\n\nI simply want you to know that you are someone I care about deeply.\n\nFor {years}, my feelings have quietly grown, and every little memory seems to make them stronger.\n\nYou have become a person I genuinely enjoy having in my life, and I hope you understand how special that is to me.\n\nThere is no pressure and no perfect answer needed. I just wanted to share something honest from my heart.\n\nYou mean a lot to me.\n\n{yourName} 🩷"
+  },
+  {
+    "id": 31,
+    "name": "Adventure Together",
+    "category": "Adventure",
+    "icon": "🗺️",
+    "preview": "#d9f0ff",
+    "theme": "blue",
+    "text": "Dear {name},\n\nLife is an adventure full of places we haven't seen, things we haven't tried, and memories we haven't made yet.\n\nFor {years}, I have been lucky enough to have you as part of my journey.\n\nNow I find myself hoping that some of the adventures still waiting for us could be shared together.\n\nIt doesn't have to be anything extraordinary. Even a simple day can become a great memory when you are with the right person.\n\nWould you like to take the next little adventure with me?\n\n{yourName} 🗺️❤️"
+  },
+  {
+    "id": 32,
+    "name": "The Day I Realized",
+    "category": "Emotional",
+    "icon": "💡",
+    "preview": "#fff1c9",
+    "theme": "gold",
+    "text": "Dear {name},\n\nI don't remember one exact moment when everything changed.\n\nMaybe it happened through hundreds of small moments.\n\nSomewhere during the past {years}, I realized that I cared about you differently. Your happiness started mattering to me. Your smile became something I looked forward to. Your presence became something I appreciated more than I could explain.\n\nThat realization stayed with me.\n\nAnd today, I finally have the courage to tell you.\n\nI really like you.\n\n{yourName} 💕"
+  },
+  {
+    "id": 33,
+    "name": "A Thousand Smiles",
+    "category": "Cute",
+    "icon": "😄",
+    "preview": "#ffe7c7",
+    "theme": "peach",
+    "text": "Dear {name},\n\nI could probably count a thousand little reasons why you make me smile.\n\nMaybe it is something you say. Maybe it is your laugh. Maybe it is simply seeing you having a good day.\n\nFor {years}, you have given me more happy moments than you probably realize.\n\nI want to give some of those smiles back.\n\nSo here is my little confession: I care about you more than I planned to, and I would love to see where that feeling takes us.\n\nKeep smiling,\n{yourName} 😄❤️"
+  },
+  {
+    "id": 34,
+    "name": "The Long Letter",
+    "category": "Long",
+    "icon": "💌",
+    "preview": "#ffd4e5",
+    "theme": "pink",
+    "text": "Dear {name},\n\nI wanted to write something that could properly explain what you mean to me, even though I know words can never completely capture a feeling.\n\nOver {years}, you have become someone I genuinely appreciate. There are so many little things about you that I admire, from the way you make people feel comfortable to the way you can turn an ordinary moment into something memorable.\n\nI treasure the conversations we have had and the memories we have created. I also find myself hoping for more moments like those in the future.\n\nI don't know what happens next, and I don't want to pretend that I do. But I do know that I would be happy if the next part of my story included more of you.\n\nThank you for simply being yourself.\n\nWith all my heart,\n{yourName} ❤️"
+  },
+  {
+    "id": 35,
+    "name": "Simple Happiness",
+    "category": "Simple",
+    "icon": "🌻",
+    "preview": "#fff2a8",
+    "theme": "gold",
+    "text": "Dear {name},\n\nHappiness doesn't always need to be something huge.\n\nSometimes happiness is a good conversation, a shared laugh, a familiar smile, or simply knowing someone special is nearby.\n\nFor {years}, you have been one of those little sources of happiness in my life.\n\nI hope we can create many more simple, happy moments together.\n\nThat is all I really want: something genuine, comfortable, and full of good memories.\n\nWould you like that too?\n\n{yourName} 🌻💕"
+  },
+  {
+    "id": 36,
+    "name": "Heart on Paper",
+    "category": "Heartfelt",
+    "icon": "💗",
+    "preview": "#ffd1e0",
+    "theme": "rose",
+    "text": "Dear {name},\n\nImagine that this letter could show you exactly what is in my heart.\n\nYou would see every little memory, every smile, every conversation, and every moment that made me realize how much I care about you.\n\nFor {years}, those moments have slowly filled my heart with feelings I can no longer hide.\n\nSo instead of keeping them there, I am putting them on paper.\n\nYou are important to me. You are special to me. And I would love the chance to become someone special to you too.\n\nWith my heart on paper,\n{yourName} 💗"
+  },
+  {
+    "id": 37,
+    "name": "A Wish",
+    "category": "Dreamy",
+    "icon": "🌠",
+    "preview": "#d8d2ff",
+    "theme": "purple",
+    "text": "Dear {name},\n\nIf I could make one wish about the future, it wouldn't be for something expensive or extraordinary.\n\nI would wish for more time with people who make life meaningful.\n\nAnd you would be one of those people.\n\nFor {years}, you have become someone I deeply appreciate. I wish for more conversations, more laughter, more memories, and more opportunities to know you better.\n\nMaybe this little letter can be the beginning of that wish coming true.\n\n{yourName} 🌠❤️"
+  },
+  {
+    "id": 38,
+    "name": "A Song Without Lyrics",
+    "category": "Poetic",
+    "icon": "🎵",
+    "preview": "#e3d7ff",
+    "theme": "lavender",
+    "text": "Dear {name},\n\nIf feelings were music, I think mine for you would be a song that slowly became louder over time.\n\nFor {years}, every memory has added another note. Every conversation has added another melody. And somewhere along the way, the whole thing became impossible to ignore.\n\nI may not know the perfect words, but I know the feeling.\n\nYou make my world a little brighter, and I would love to know if we could create our own beautiful rhythm together.\n\nWith a song in my heart,\n{yourName} 🎵💕"
+  },
+  {
+    "id": 39,
+    "name": "The Best Surprise",
+    "category": "Sweet",
+    "icon": "🎁",
+    "preview": "#ffd7e7",
+    "theme": "pink",
+    "text": "Dear {name},\n\nSome of life's best surprises are the ones we never saw coming.\n\nMeeting you was one of mine.\n\nFor {years}, you have slowly become someone I care about more than I expected. What started as ordinary moments turned into memories that I now treasure.\n\nI am grateful that life brought you into my story.\n\nAnd now I have one little hope: that maybe you will choose to stay in the next chapters too.\n\nWould you?\n\n{yourName} 🎁❤️"
+  },
+  {
+    "id": 40,
+    "name": "Golden Memory",
+    "category": "Memories",
+    "icon": "✨",
+    "preview": "#ffe49a",
+    "theme": "gold",
+    "text": "Dear {name},\n\nSome memories feel like they have a little golden glow around them.\n\nWhenever I think about the moments we have shared, many of them have that feeling.\n\nFor {years}, you have been part of memories that I genuinely treasure, and I hope there are many more waiting for us.\n\nLife moves quickly, so I want to appreciate the people who make it meaningful while I can.\n\nYou are one of those people.\n\nThank you for being part of my story.\n\n{yourName} ✨"
+  },
+  {
+    "id": 41,
+    "name": "Blue Skies",
+    "category": "Hopeful",
+    "icon": "💙",
+    "preview": "#bfe7ff",
+    "theme": "blue",
+    "text": "Dear {name},\n\nWhenever I think about the future, I like to imagine blue skies, new possibilities, and happy memories still waiting to happen.\n\nFor {years}, you have become someone I hope will be part of those possibilities.\n\nI don't know exactly where life will take us, but I would love to discover some of those paths together.\n\nWhatever happens, I want you to know that you have brought a lot of happiness into my life.\n\nMaybe there is more happiness waiting ahead.\n\n{yourName} 💙"
+  },
+  {
+    "id": 42,
+    "name": "The Warmest Thought",
+    "category": "Soft",
+    "icon": "🧸",
+    "preview": "#ffe0cc",
+    "theme": "peach",
+    "text": "Dear {name},\n\nWhenever I think of you, there is a kind of warmth that is difficult to explain.\n\nFor {years}, you have become a comforting and wonderful thought in my life.\n\nI appreciate the way you make ordinary moments feel less ordinary. I appreciate your kindness, your personality, and the memories we have created.\n\nI hope we can create many more moments that feel just as warm.\n\nYou mean more to me than you probably know.\n\n{yourName} 🧸❤️"
+  },
+  {
+    "id": 43,
+    "name": "Lavender Dreams",
+    "category": "Dreamy",
+    "icon": "💜",
+    "preview": "#d9c7ff",
+    "theme": "lavender",
+    "text": "Dear {name},\n\nSome dreams are difficult to explain because they are made from feelings rather than pictures.\n\nWhen I imagine a happy future, I often imagine simple things: good conversations, shared laughter, peaceful moments, and someone special beside me.\n\nFor {years}, that someone has slowly become you.\n\nMaybe it is only a dream right now, but dreams sometimes become beginnings.\n\nI would love the chance to discover whether ours could become something real.\n\n{yourName} 💜"
+  },
+  {
+    "id": 44,
+    "name": "A Thousand Reasons",
+    "category": "Deep",
+    "icon": "💞",
+    "preview": "#ffcddd",
+    "theme": "rose",
+    "text": "Dear {name},\n\nI could list a thousand reasons why I care about you, but I think the most important one is simply that you make life feel better by being part of it.\n\nFor {years}, I have noticed more and more things about you that I admire.\n\nYou have become someone I think about, someone I appreciate, and someone whose happiness genuinely matters to me.\n\nI don't need a thousand words to make this true.\n\nI just need the courage to say it.\n\nI care about you deeply.\n\n{yourName} 💞"
+  },
+  {
+    "id": 45,
+    "name": "The Gentle Question",
+    "category": "Soft",
+    "icon": "🌷",
+    "preview": "#ffe4ee",
+    "theme": "pink",
+    "text": "Dear {name},\n\nI have something to ask, but before I do, I want you to know that there is no pressure behind these words.\n\nFor {years}, I have grown to care about you in a way that feels genuine and special.\n\nI value the time we spend together, the memories we have, and the person you are.\n\nSo here is my gentle little question:\n\nWould you like to see where our story could go?\n\nWhatever your answer, I will always be grateful for the memories we already have.\n\n{yourName} 🌷"
+  },
+  {
+    "id": 46,
+    "name": "Our Little Universe",
+    "category": "Dreamy",
+    "icon": "🌌",
+    "preview": "#aaa1ff",
+    "theme": "night",
+    "text": "Dear {name},\n\nSometimes it feels like every person has their own little universe of memories, dreams, hopes, and stories.\n\nFor {years}, our universes have crossed paths in ways that I have come to treasure.\n\nI wonder what could happen if we created a little universe of our own memories.\n\nIt could be made of laughter, conversations, adventures, quiet moments, and all the little things that make life meaningful.\n\nI would love to discover that universe with you.\n\n{yourName} 🌌❤️"
+  },
+  {
+    "id": 47,
+    "name": "Just You",
+    "category": "Simple",
+    "icon": "🫶",
+    "preview": "#ffd9e6",
+    "theme": "pink",
+    "text": "Dear {name},\n\nThere are many amazing people in the world, but somehow you are the one who became special to me.\n\nFor {years}, my feelings have continued to grow through all the little moments we have shared.\n\nI don't need to compare you with anyone else. I don't need complicated explanations.\n\nI simply know that I care about you.\n\nAnd I would love to know if there could be a place for me in your heart too.\n\n{yourName} 🫶❤️"
+  },
+  {
+    "id": 48,
+    "name": "A Future Memory",
+    "category": "Future",
+    "icon": "🔮",
+    "preview": "#e2d4ff",
+    "theme": "purple",
+    "text": "Dear {name},\n\nI sometimes imagine looking back years from now and remembering the little moments that changed everything.\n\nMaybe this could be one of those moments.\n\nFor {years}, you have become someone very special to me. I hope that one day we can look back at this letter and smile because it became the beginning of something wonderful.\n\nI don't know what the future has planned.\n\nBut I know I would like to give us a chance.\n\nWith hope,\n{yourName} 🔮❤️"
+  },
+  {
+    "id": 49,
+    "name": "The Missing Piece",
+    "category": "Romantic",
+    "icon": "🧩",
+    "preview": "#ffd5df",
+    "theme": "rose",
+    "text": "Dear {name},\n\nLife is made of many little pieces: family, friends, dreams, memories, adventures, and moments we never expected.\n\nFor {years}, you have become one of the pieces I value most.\n\nYou bring something into my days that is difficult to replace. Your presence makes certain moments brighter and certain memories more meaningful.\n\nI don't know if our stories are meant to fit perfectly together, but I would love the chance to find out.\n\nMaybe we can discover the picture one piece at a time.\n\n{yourName} 🧩💕"
+  },
+  {
+    "id": 50,
+    "name": "The Best Part",
+    "category": "Sweet",
+    "icon": "🌟",
+    "preview": "#fff0b0",
+    "theme": "gold",
+    "text": "Dear {name},\n\nEvery day has different moments. Some are exciting, some are ordinary, and some become memories without us realizing it.\n\nFor me, many of the best moments somehow include you.\n\nFor {years}, you have been a wonderful part of my life, and I want you to know how much I appreciate that.\n\nI hope we can create even more moments that become the best parts of our days.\n\nMaybe this letter can be the beginning.\n\n{yourName} 🌟❤️"
+  },
+ {
+    "id": 51,
+    "name": "If Tomorrow Comes",
+    "category": "Hopeful",
+    "icon": "🌅",
+    "preview": "#ffd0a8",
+    "theme": "peach",
+    "text": "Dear {name},\n\nEvery tomorrow brings something new.\n\nFor {years}, I have hoped that some of my tomorrows would include more time with you.\n\nI want more conversations, more laughs, more memories, and more chances to learn about the person you are.\n\nI cannot predict the future, but I can choose to be honest about what I hope for.\n\nAnd I hope there is a future where our story gets a little longer.\n\nUntil tomorrow,\n{yourName} 🌅💕"
+  },
+  {
+    "id": 52,
+    "name": "The Kindness Letter",
+    "category": "Appreciation",
+    "icon": "🌻",
+    "preview": "#fff2b8",
+    "theme": "gold",
+    "text": "Dear {name},\n\nOne of the things I admire most about you is the way you treat people.\n\nKindness is easy to overlook, but I notice it.\n\nFor {years}, I have had the chance to see little pieces of the person you are, and those pieces have made me appreciate you more and more.\n\nYou deserve to know that your kindness makes a difference.\n\nAnd for me, it has made you someone incredibly special.\n\nThank you for being you.\n\n{yourName} 🌻❤️"
+  },
+  {
+    "id": 53,
+    "name": "A Little Adventure",
+    "category": "Fun",
+    "icon": "🎈",
+    "preview": "#d6f4ff",
+    "theme": "blue",
+    "text": "Dear {name},\n\nWhat if we stopped wondering what could happen and simply gave ourselves a chance to find out?\n\nFor {years}, I have enjoyed having you in my life, and I would love to turn some of those ordinary moments into new adventures.\n\nWe could laugh at silly things, discover new places, share stories, and create memories we never expected.\n\nI don't know exactly where the adventure would lead.\n\nBut I know who I would like beside me.\n\nYou.\n\n{yourName} 🎈❤️"
+  },
+  {
+    "id": 54,
+    "name": "A Page From My Heart",
+    "category": "Poetic",
+    "icon": "📜",
+    "preview": "#eadcff",
+    "theme": "lavender",
+    "text": "Dear {name},\n\nIf my heart had a book, there would be pages filled with memories, dreams, and people who changed me.\n\nFor {years}, you have slowly become one of the most meaningful pages.\n\nEvery conversation adds a sentence. Every laugh adds a little color. Every memory makes the page more precious.\n\nI don't want to close this chapter.\n\nI want to keep writing.\n\nAnd I hope you might want to write the next page with me.\n\n{yourName} 📜💕"
+  },
+  {
+    "id": 55,
+    "name": "The Unexpected Feeling",
+    "category": "Emotional",
+    "icon": "💓",
+    "preview": "#ffd3df",
+    "theme": "rose",
+    "text": "Dear {name},\n\nI never planned to feel this way.\n\nSomewhere during the past {years}, something changed. The person I once simply knew became someone I started caring about more deeply.\n\nSuddenly, little things mattered. Conversations mattered. Memories mattered. And your happiness started mattering to me.\n\nIt was unexpected, but I don't regret it.\n\nI am grateful that you became someone worth caring about this much.\n\n{yourName} 💓"
+  },
+  {
+    "id": 56,
+    "name": "A Place Beside You",
+    "category": "Future",
+    "icon": "🌿",
+    "preview": "#d9f3df",
+    "theme": "green",
+    "text": "Dear {name},\n\nSometimes I imagine ordinary future days: talking about our day, laughing about something silly, discovering new places, and simply enjoying the people around us.\n\nWhen I imagine those moments, I hope there is a place beside you for me.\n\nFor {years}, you have become someone I deeply appreciate.\n\nI don't need to know everything about tomorrow.\n\nI just hope that tomorrow gives us more opportunities to share moments together.\n\n{yourName} 🌿❤️"
+  },
+  {
+    "id": 57,
+    "name": "The Happy Thought",
+    "category": "Cute",
+    "icon": "💭",
+    "preview": "#ffe5f0",
+    "theme": "pink",
+    "text": "Dear {name},\n\nYou are one of those thoughts that can appear randomly and immediately make me smile.\n\nFor {years}, that has happened more times than I can count.\n\nMaybe it is because of something funny you said. Maybe it is because I remembered a moment we shared. Or maybe it is simply because thinking about you makes me happy.\n\nWhatever the reason, I wanted you to know.\n\nYou are a very happy thought in my life.\n\n{yourName} 💭💕"
+  },
+  {
+    "id": 58,
+    "name": "The Rose Letter",
+    "category": "Classic",
+    "icon": "🌹",
+    "preview": "#ffd0d8",
+    "theme": "red",
+    "text": "Dear {name},\n\nA rose is beautiful because of all the little details that come together to create it.\n\nIn a similar way, what I appreciate about you is made of many little things.\n\nYour personality, your kindness, your smile, your sense of humor, and the memories we have shared have all become reasons why you are special to me.\n\nFor {years}, those reasons have only grown.\n\nI hope this little rose carries a little piece of the feeling I have for you.\n\nWith care,\n{yourName} 🌹❤️"
+  },
+  {
+    "id": 59,
+    "name": "A Letter From Tomorrow",
+    "category": "Creative",
+    "icon": "📅",
+    "preview": "#dce8ff",
+    "theme": "blue",
+    "text": "Dear {name},\n\nImagine this is a letter from tomorrow, reminding us about today.\n\nIt would say that someone finally found the courage to be honest about their feelings.\n\nFor {years}, those feelings have quietly grown stronger. And today, I decided they deserved to be spoken instead of kept inside.\n\nMaybe this moment becomes a beautiful memory. Maybe it becomes the beginning of something new.\n\nEither way, I am glad I told you.\n\nWith hope for tomorrow,\n{yourName} 💙"
+  },
+  {
+    "id": 60,
+    "name": "The Cozy Chapter",
+    "category": "Cozy",
+    "icon": "🧡",
+    "preview": "#ffe0c9",
+    "theme": "peach",
+    "text": "Dear {name},\n\nSome of my favorite things are simple: comfortable conversations, shared laughs, peaceful moments, and being around people who make me feel happy.\n\nYou have become one of those people.\n\nFor {years}, I have come to appreciate how easy it can feel to simply be myself around you.\n\nI hope we can have many more comfortable, happy, ordinary days together.\n\nBecause sometimes ordinary days with the right person become extraordinary memories.\n\n{yourName} 🧡"
+  },
+  {
+    "id": 61,
+    "name": "A Heart Full of Stars",
+    "category": "Dreamy",
+    "icon": "🌟",
+    "preview": "#c8c2ff",
+    "theme": "night",
+    "text": "Dear {name},\n\nIf my heart were a night sky, I think the memories of you would be the brightest stars.\n\nFor {years}, every little moment has added another light.\n\nSome memories make me laugh. Some make me smile quietly. Some simply remind me how lucky I feel to have met you.\n\nI hope there are many more stars waiting to be added to that sky.\n\nMaybe we can create some of them together.\n\n{yourName} 🌟❤️"
+  },
+  {
+    "id": 62,
+    "name": "The Almost-Said Words",
+    "category": "Confession",
+    "icon": "💬",
+    "preview": "#ffd8e5",
+    "theme": "pink",
+    "text": "Dear {name},\n\nThere have been so many moments when I almost said this.\n\nAlmost.\n\nFor {years}, I have carried these feelings quietly, wondering when the right time would come.\n\nEventually I realized that there may never be a perfect time. Sometimes you simply have to be honest.\n\nSo here are the words I almost said so many times:\n\nI care about you. I like you. And I would love the chance to see if our story could become something more.\n\n{yourName} ❤️"
+  },
+  {
+    "id": 63,
+    "name": "The Brightest Part",
+    "category": "Sweet",
+    "icon": "✨",
+    "preview": "#fff0bd",
+    "theme": "gold",
+    "text": "Dear {name},\n\nThere are many good things in life, but some people make everything feel a little brighter.\n\nFor {years}, you have been that person for me.\n\nYou have made me smile during ordinary days and given me memories I genuinely treasure.\n\nI hope you know that your presence matters.\n\nAnd I hope I can become someone whose presence matters to you too.\n\nThat would mean more to me than you know.\n\n{yourName} ✨💕"
+  },
+  {
+    "id": 64,
+    "name": "A Quiet Promise",
+    "category": "Heartfelt",
+    "icon": "🤍",
+    "preview": "#eeeeff",
+    "theme": "lavender",
+    "text": "Dear {name},\n\nI cannot promise that every day will be perfect. Nobody can.\n\nBut I can promise that if you give me a chance, I will appreciate the little moments and never take them for granted.\n\nFor {years}, you have become someone important to me, and I would love to create more memories together.\n\nNo huge promises. No perfect story.\n\nJust honesty, kindness, laughter, and the hope that we can build something meaningful.\n\nThat is what I wish for.\n\n{yourName} 🤍"
+  },
+  {
+    "id": 65,
+    "name": "The Day Gets Better",
+    "category": "Cute",
+    "icon": "🌞",
+    "preview": "#ffe8ad",
+    "theme": "gold",
+    "text": "Dear {name},\n\nThere is something funny about you: somehow, the day always seems a little better when you are part of it.\n\nFor {years}, I have noticed this again and again.\n\nA conversation with you can turn around my mood. A smile can stay in my thoughts. A simple moment can become something I remember later.\n\nMaybe that is what makes someone special.\n\nAnd you are definitely special to me.\n\n{yourName} 🌞❤️"
+  },
+  {
+    "id": 66,
+    "name": "The Little Forever",
+    "category": "Romantic",
+    "icon": "♾️",
+    "preview": "#ffd5e2",
+    "theme": "rose",
+    "text": "Dear {name},\n\nI don't know what forever really looks like.\n\nMaybe forever isn't one huge moment. Maybe it is a collection of small moments that we choose to treasure.\n\nFor {years}, you have already given me many moments worth remembering.\n\nI would love the chance to collect more: more laughs, more conversations, more adventures, and more reasons to smile.\n\nI don't need to know the whole future.\n\nI would just like to begin the next part with you.\n\n{yourName} ♾️❤️"
+  },
+  {
+    "id": 67,
+    "name": "The Kind of Person",
+    "category": "Appreciation",
+    "icon": "🌷",
+    "preview": "#ffe4ef",
+    "theme": "pink",
+    "text": "Dear {name},\n\nYou are the kind of person people remember.\n\nNot because you try to be extraordinary, but because of the way you make people feel.\n\nFor {years}, I have been lucky enough to experience some of that kindness and warmth myself.\n\nYou have become someone I respect, appreciate, and care about deeply.\n\nI hope you always remember that you make a difference simply by being yourself.\n\nAnd I hope I can be part of your story for a long time.\n\n{yourName} 🌷💕"
+  },
+  {
+    "id": 68,
+    "name": "A New Beginning",
+    "category": "Hopeful",
+    "icon": "🌱",
+    "preview": "#d9f5df",
+    "theme": "green",
+    "text": "Dear {name},\n\nEvery new beginning starts with one small step.\n\nMaybe this letter can be ours.\n\nFor {years}, I have watched my feelings grow from something small into something I genuinely care about.\n\nToday, I am taking one little step and telling you the truth.\n\nI like you, and I would love the chance to get to know you even better.\n\nWhatever happens next, I am glad I found the courage to begin.\n\n{yourName} 🌱❤️"
+  },
+  {
+    "id": 69,
+    "name": "The Memory I Want",
+    "category": "Future",
+    "icon": "📸",
+    "preview": "#ffe1d1",
+    "theme": "peach",
+    "text": "Dear {name},\n\nWe already have memories that make me smile.\n\nBut there are still so many memories we haven't made.\n\nFor {years}, you have been part of my life, and I hope that continues in new and unexpected ways.\n\nI want future memories filled with laughter, little adventures, long conversations, and simple moments that become special because we shared them.\n\nMaybe one day we will look back at this letter as the moment everything started.\n\nI hope so.\n\n{yourName} 📸💕"
+  },
+  {
+    "id": 70,
+    "name": "The One I Notice",
+    "category": "Sweet",
+    "icon": "👀",
+    "preview": "#ffd7e5",
+    "theme": "rose",
+    "text": "Dear {name},\n\nThere are many people around us every day, but somehow you are the person I always notice.\n\nFor {years}, my attention seems to find you without even trying.\n\nMaybe it is your smile. Maybe it is your personality. Maybe it is simply the way you make ordinary moments feel different.\n\nWhatever the reason, I am grateful that I noticed you.\n\nAnd I hope you will notice this little confession too.\n\nI really care about you.\n\n{yourName} ❤️"
+  },
+  {
+    "id": 71,
+    "name": "A Letter Under the Stars",
+    "category": "Poetic",
+    "icon": "🌠",
+    "preview": "#b7b0ff",
+    "theme": "night",
+    "text": "Dear {name},\n\nIf I could choose the perfect place to tell you this, maybe it would be somewhere quiet under a sky full of stars.\n\nBut perhaps the place doesn't matter as much as the words.\n\nFor {years}, you have become someone I think about with a smile. You have created memories in my life that I will always appreciate.\n\nSo under this imaginary sky, I want to tell you something simple.\n\nYou are special to me, and I would love to see what kind of story we could write together.\n\n{yourName} 🌠❤️"
+  },
+  {
+    "id": 72,
+    "name": "The Happiness Letter",
+    "category": "Happy",
+    "icon": "💖",
+    "preview": "#ffd3e4",
+    "theme": "pink",
+    "text": "Dear {name},\n\nHappiness can be found in many places, but some people make it easier to find.\n\nFor {years}, you have been one of those people for me.\n\nYou have given me countless little reasons to smile, and I hope someday I can give you just as many.\n\nI appreciate every memory, every conversation, and every moment that brought us here.\n\nThank you for being part of my happiness.\n\nI hope there can be more chapters ahead.\n\n{yourName} 💖"
+  },
+  {
+    "id": 73,
+    "name": "The Honest Beginning",
+    "category": "Confession",
+    "icon": "❤️",
+    "preview": "#ffd0d8",
+    "theme": "red",
+    "text": "Dear {name},\n\nThis isn't a perfect speech or a perfectly planned confession.\n\nIt is simply me being honest.\n\nFor {years}, I have cared about you more and more. Somewhere between all the conversations and memories, you became someone incredibly important to me.\n\nI don't know exactly what you will say, but I hope you understand how much courage it took to finally write these words.\n\nI like you, {name}.\n\nAnd I would love the chance to discover what could happen next.\n\n{yourName} ❤️"
+  },
+  {
+    "id": 74,
+    "name": "Our Next Chapter",
+    "category": "Story",
+    "icon": "📖",
+    "preview": "#e1d5ff",
+    "theme": "purple",
+    "text": "Dear {name},\n\nEvery story has chapters we remember forever.\n\nFor {years}, we have already created some of ours through little conversations, shared moments, laughter, and memories.\n\nBut our story doesn't have to stop there.\n\nThere could be another chapter waiting for us, filled with new experiences and memories we haven't imagined yet.\n\nI would love the opportunity to turn that page with you.\n\nSo, what do you say?\n\nShall we see what the next chapter holds?\n\n{yourName} 📖❤️"
+  },
+  {
+    "id": 75,
+    "name": "My Final Little Question",
+    "category": "Special",
+    "icon": "💍",
+    "preview": "#ffd1df",
+    "theme": "rose",
+    "text": "Dear {name},\n\nAfter all these words, all these memories, and all the feelings I have carried for {years}, I think there is only one thing left to say.\n\nYou have become someone incredibly special to me. You have brought smiles into my days, given me memories I treasure, and made me realize how wonderful it can be when someone truly matters.\n\nI don't know what the future will look like, but I know I would love the opportunity to discover it with you.\n\nSo here is my final little question:\n\nWould you give us a chance to create our own beautiful story?\n\nWith all my heart,\n{yourName} ❤️"
   }
-] 
+]
