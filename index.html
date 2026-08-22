@@ -42,10 +42,11 @@
 <audio
     id="bgMusic"
     loop
+    preload="auto"
 >
 
     <source
-        src="love-music.mp3"
+        src="music.mp3"
         type="audio/mpeg"
     >
 
@@ -55,6 +56,7 @@
 <button
     id="musicButton"
     class="music-button"
+    type="button"
     onclick="toggleMusic()"
 >
     🎵 Play Music
@@ -92,8 +94,6 @@
         </h2>
 
 
-        <!-- YOUR NAME -->
-
         <label for="yourName">
             💌 Your Name
         </label>
@@ -104,8 +104,6 @@
             placeholder="Enter your name"
         >
 
-
-        <!-- CRUSH NAME -->
 
         <label for="crushName">
             💖 Their Name
@@ -118,8 +116,6 @@
         >
 
 
-        <!-- YEARS -->
-
         <label for="years">
             ❤️ How many years have you loved them?
         </label>
@@ -131,8 +127,6 @@
             placeholder="For example: 2"
         >
 
-
-        <!-- FIRST LOVE -->
 
         <label for="firstLove">
             💕 Is it your first love?
@@ -151,8 +145,6 @@
         </select>
 
 
-        <!-- PHOTO -->
-
         <label for="specialPhoto">
             📸 Special Photo
         </label>
@@ -163,8 +155,6 @@
             accept="image/*"
         >
 
-
-        <!-- PERSONAL MESSAGE -->
 
         <label for="customMessage">
             💌 Personal Message
@@ -200,8 +190,6 @@
 
         </div>
 
-
-        <!-- GENERATE -->
 
         <button
             type="button"
@@ -266,7 +254,7 @@
 
     <!-- ======================================
          PERSONAL MESSAGE RESULT
-    ======================================= -->
+    ====================================== -->
 
     <div
         id="customMessageDisplay"
@@ -276,7 +264,7 @@
 
     <!-- ======================================
          ENVELOPE
-    ======================================= -->
+    ====================================== -->
 
     <section
         id="envelopeSection"
@@ -304,7 +292,7 @@
 
     <!-- ======================================
          LETTER
-    ======================================= -->
+    ====================================== -->
 
     <section
         id="letterSection"
@@ -312,9 +300,6 @@
     >
 
         <div class="letter">
-
-
-            <!-- ROSE -->
 
             <div id="roseContainer">
 
@@ -329,18 +314,11 @@
             </div>
 
 
-            <!-- PHOTO WILL APPEAR ABOVE -->
-
-
-            <!-- PROPOSAL TEXT -->
-
             <div
                 id="proposalText"
                 class="proposal-text"
             ></div>
 
-
-            <!-- LETTER ACTIONS -->
 
             <div class="letter-actions">
 
@@ -539,10 +517,6 @@
 
 </div>
 
-
-<!-- ==========================================
-     JAVASCRIPT
-========================================== -->
 
 <script src="script.js"></script>
 
