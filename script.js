@@ -1136,3 +1136,147 @@ document.addEventListener(
 
     }
 );
+/* ==========================================
+   AI LOVE ASSISTANT
+========================================== */
+
+async function sendAIMessage() {
+
+    const input =
+        document.getElementById("aiChatInput");
+
+    const messages =
+        document.getElementById("aiChatMessages");
+
+    const status =
+        document.getElementById("aiChatStatus");
+
+    const button =
+        document.getElementById("aiSendButton");
+
+
+    const userText =
+        input.value.trim();
+
+
+    if (!userText) {
+        return;
+    }
+
+
+    /* USER MESSAGE */
+
+    const userMessage =
+        document.createElement("div");
+
+    userMessage.className =
+        "user-message";
+
+    userMessage.innerHTML =
+        `<strong>You:</strong>
+         <p>${escapeAIText(userText)}</p>`;
+
+    messages.appendChild(userMessage);
+
+
+    input.value = "";
+
+    messages.scrollTop =
+        messages.scrollHeight;
+
+
+    /* TEMPORARY RESPONSE */
+
+    button.disabled = true;
+
+    status.textContent =
+        "💭 Thinking...";
+
+
+    /*
+       The real OpenAI request will be
+       connected here later.
+    */
+
+    setTimeout(function() {
+
+        const aiMessage =
+            document.createElement("div");
+
+        aiMessage.className =
+            "ai-message";
+
+        aiMessage.innerHTML =
+            `<strong>💕 Love Assistant:</strong>
+             <p>
+             I'm ready to help! The AI connection
+             will be added in the next step. ❤️
+             </p>`;
+
+        messages.appendChild(aiMessage);
+
+        messages.scrollTop =
+            messages.scrollHeight;
+
+        button.disabled = false;
+
+        status.textContent = "";
+
+    }, 700);
+}
+
+
+/* ==========================================
+   SAFE CHAT TEXT
+========================================== */
+
+function escapeAIText(text) {
+
+    const div =
+        document.createElement("div");
+
+    div.textContent =
+        text;
+
+    return div.innerHTML;
+}
+
+
+/* ==========================================
+   ENTER TO SEND
+========================================== */
+
+document.addEventListener(
+    "DOMContentLoaded",
+    function() {
+
+        const input =
+            document.getElementById(
+                "aiChatInput"
+            );
+
+
+        if (!input) {
+            return;
+        }
+
+
+        input.addEventListener(
+            "keydown",
+            function(event) {
+
+                if (
+                    event.key === "Enter" &&
+                    !event.shiftKey
+                ) {
+
+                    event.preventDefault();
+
+                    sendAIMessage();
+                }
+
+            }
+        );
+
+    }
+);
