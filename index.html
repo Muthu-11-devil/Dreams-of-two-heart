@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Love Proposal ❤️</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<audio id="bgMusic" loop preload="auto">
+    <source src="love-music.mp3" type="audio/mpeg">
+</audio>
+
+<button id="musicButton" class="music-button" onclick="toggleMusic()">
+    🎵 Play Music
+</button>
+
+<div id="hearts"></div>
+
+<main class="container">
+
+    <h1>💕 Love Proposal 💕</h1>
+
+    <div class="big-heart">❤️</div>
+
+    <!-- PROPOSAL FORM -->
+    <section class="card">
+
+        <label>Your Name</label>
+        <input id="yourName" type="text" placeholder="Enter your name">
+
+        <label>Crush's Name</label>
+        <input id="crushName" type="text" placeholder="Enter their name">
+
+        <label>How many years have you loved them?</label>
+        <input id="years" type="number" min="0" step="0.1" placeholder="Example: 3">
+
+        <label>Is it your first love?</label>
+        <select id="firstLove">
+            <option value="Yes">Yes ❤️</option>
+            <option value="No">No 💕</option>
+        </select>
+
+        <label>📸 Special Photo</label>
+        <input id="specialPhoto" type="file" accept="image/*">
+
+        <label>💌 Personal Message</label>
+        <textarea
+            id="customMessage"
+            placeholder="Write something special..."
+        ></textarea>
+
+        <!-- ONLINE TEMPLATE LIBRARY -->
+        <label>🎨 Choose a Proposal Template</label>
+
+        <div id="templateStatus">
+            Loading online templates...
+        </div>
+
+        <div id="templateLibrary"></div>
+
+        <button type="button" onclick="generateProposal()">
+            Generate Proposal ❤️
+        </button>
+
+    </section>
+
+
+    <!-- LOVE METER -->
+    <section id="scoreSection" class="feature-card hidden">
+
+        <h2>💖 Love Meter</h2>
+
+        <div class="love-meter">
+            <div id="scoreFill">
+                <span id="scoreNumber">0%</span>
+            </div>
+        </div>
+
+        <p id="scoreMessage"></p>
+
+    </section>
+
+
+    <!-- ENVELOPE -->
+    <section id="envelopeSection" class="feature-card hidden">
+
+        <h2>💌 A Letter Awaits</h2>
+
+        <div id="envelope" onclick="openLetter()">
+            💌
+        </div>
+
+        <p>Tap the envelope to open your proposal</p>
+
+    </section>
+
+
+    <!-- LETTER -->
+    <section id="letterSection" class="hidden">
+
+        <div id="proposalLetter" class="letter">
+
+            <div id="roseContainer">
+                <div class="rose">🌹</div>
+                <p>A special rose for you ❤️</p>
+            </div>
+
+            <div id="photoContainer" class="hidden">
+                <img id="proposalPhoto" alt="Special Memory">
+            </div>
+
+            <div id="customMessageDisplay" class="hidden"></div>
+
+            <div id="proposalText" class="proposal-text"></div>
+
+        </div>
+
+
+        <div class="action-buttons">
+
+            <button onclick="downloadTxt()">
+                📥 Download Proposal
+            </button>
+
+            <button onclick="copyProposal()">
+                📋 Copy Proposal
+            </button>
+
+            <button onclick="shareProposal()">
+                📱 Share Proposal
+            </button>
+
+        </div>
+
+
+        <!-- LOVE STORY -->
+        <section class="story-box">
+
+            <h2>📖 Create Your Love Story</h2>
+
+            <input
+                id="meetPlace"
+                type="text"
+                placeholder="Where did you meet?"
+            >
+
+            <input
+                id="favoriteMemory"
+                type="text"
+                placeholder="Your favorite memory"
+            >
+
+            <input
+                id="dreamPlace"
+                type="text"
+                placeholder="Your dream destination"
+            >
+
+            <button onclick="generateLoveStory()">
+                Create My Story ✨
+            </button>
+
+            <div id="loveStory" class="hidden"></div>
+
+        </section>
+
+
+        <!-- LOVE SKY -->
+        <section class="star-section">
+
+            <h2>🌌 Your Love Sky</h2>
+
+            <p>Tap a star to discover a secret message ✨</p>
+
+            <div id="starSky">
+
+                <span onclick="starMessage(1)">⭐</span>
+                <span onclick="starMessage(2)">✨</span>
+                <span onclick="starMessage(3)">⭐</span>
+                <span onclick="starMessage(4)">🌟</span>
+                <span onclick="starMessage(5)">✨</span>
+                <span onclick="starMessage(6)">⭐</span>
+
+                <div id="starMessage">
+                    Tap a star 💫
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- FEEDBACK -->
+        <section class="feedback">
+
+            <h2>💬 Your Feedback</h2>
+
+            <textarea
+                id="feedbackText"
+                placeholder="Tell us what you think..."
+            ></textarea>
+
+            <button onclick="submitFeedback()">
+                Submit Feedback ❤️
+            </button>
+
+            <p id="feedbackMessage"></p>
+
+        </section>
+
+
+        <button class="another-button" onclick="location.reload()">
+            🔄 Generate Another
+        </button>
+
+    </section>
+
+</main>
+
+<script src="script.js"></script>
+
+</body>
+</html>
