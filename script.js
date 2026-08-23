@@ -1172,7 +1172,7 @@ ${endings[Math.floor(Math.random() * endings.length)]}
 
 — With a little courage ❤️`;
 
-    result.innerHTML = `
+        result.innerHTML = `
         <div class="generated-poem">
             <h3>💌 Your Poem</h3>
             <p>${poem.replace(/\n/g, "<br>")}</p>
@@ -1182,16 +1182,16 @@ ${endings[Math.floor(Math.random() * endings.length)]}
             </button>
         </div>
     `;
-} ==========================================
+}
+
+
+/* ==========================================
    START
 ========================================== */
 
 document.addEventListener(
     "DOMContentLoaded",
     function() {
-
         loadTemplates();
-
     }
 );
-
