@@ -135,6 +135,42 @@
 
         </div>
 
+<section class="poem-generator">
+  <h2>✨ Create a Poem</h2>
+  <p>Tell us a little about your special person.</p>
+
+  <input id="poemName" type="text" placeholder="Their name or nickname">
+
+  <input id="poemPersonality" type="text"
+         placeholder="Their personality">
+
+  <input id="poemInterests" type="text"
+         placeholder="Their hobbies or interests">
+
+  <textarea id="poemLikes"
+            placeholder="What do you like about your crush?"></textarea>
+
+  <textarea id="poemMemory"
+            placeholder="A favorite memory"></textarea>
+
+  <textarea id="poemFeelings"
+            placeholder="How do you feel about them?"></textarea>
+
+  <select id="poemStyle">
+    <option value="cute">💕 Cute</option>
+    <option value="dreamy">🌙 Dreamy</option>
+    <option value="emotional">💗 Emotional</option>
+    <option value="funny">😊 Playful</option>
+    <option value="simple">✨ Simple</option>
+  </select>
+
+  <button type="button" onclick="generatePoem()">
+    ✨ Generate My Poem
+  </button>
+
+  <div id="poemResult"></div>
+</section>
+
 
         <!-- LOVE STORY -->
         <section class="story-box">
