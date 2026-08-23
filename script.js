@@ -1097,3 +1097,109 @@ document.addEventListener(
 
     }
 );
+
+function randomItem(array) {
+    return array[Math.floor(Math.random() * array.length)];
+}
+
+function generatePoem() {
+
+    const name =
+        document.getElementById("poemName").value.trim();
+
+    const personality =
+        document.getElementById("poemPersonality").value.trim();
+
+    const interests =
+        document.getElementById("poemInterests").value.trim();
+
+    const likes =
+        document.getElementById("poemLikes").value.trim();
+
+    const memory =
+        document.getElementById("poemMemory").value.trim();
+
+    const feelings =
+        document.getElementById("poemFeelings").value.trim();
+
+    const style =
+        document.getElementById("poemStyle").value;
+
+    if (!name || !likes || !feelings) {
+        document.getElementById("poemResult").innerHTML =
+            "<p>💕 Please fill in their name, what you like about them, and how you feel.</p>";
+        return;
+    }
+
+    const openings = [
+        `Dear ${name},`,
+        `${name},`,
+        `For ${name},`,
+        `A little poem for ${name},`
+    ];
+
+    const endings = [
+        "Some feelings are simply too beautiful to keep unspoken.",
+        "And maybe this little poem can become a memory of its own.",
+        "Whatever tomorrow brings, I am glad I met you.",
+        "Sometimes the smallest feelings become the most beautiful memories."
+    ];
+
+    let poem = "";
+
+    poem += randomItem(openings) + "\n\n";
+
+    poem += `There is something about you that makes ordinary moments feel special.\n`;
+
+    if (personality) {
+        poem += `Your ${personality} nature is something I cannot help but admire.\n`;
+    }
+
+    if (interests) {
+        poem += `Even the things you love, like ${interests}, somehow make you more memorable to me.\n`;
+    }
+
+    poem += "\n";
+
+    poem += `What I like about you is simple:\n`;
+    poem += `${likes}.\n`;
+
+    poem += "\n";
+
+    if (memory) {
+        poem += `I still remember ${memory},\n`;
+        poem += `a little moment that stayed in my heart.\n\n`;
+    }
+
+    poem += `And the truth is...\n`;
+    poem += `${feelings}.\n\n`;
+
+    if (style === "cute") {
+        poem += "Maybe you are the little reason behind more smiles than you know. 💕\n\n";
+    }
+
+    if (style === "dreamy") {
+        poem += "Maybe somewhere between the stars and quiet moments, our story found its beginning. 🌙\n\n";
+    }
+
+    if (style === "emotional") {
+        poem += "Some feelings grow quietly, until one day they become impossible to ignore. ❤️\n\n";
+    }
+
+    if (style === "funny") {
+        poem += "So I guess my heart has officially decided that you are its favorite distraction. 😊\n\n";
+    }
+
+    if (style === "simple") {
+        poem += "I just wanted you to know that you are special to me. ✨\n\n";
+    }
+
+    poem += randomItem(endings);
+
+    document.getElementById("poemResult").innerHTML =
+        `<h3>💌 Your Poem</h3>
+         <p>${escapeAIText(poem).replace(/\n/g, "<br>")}</p>
+         <button type="button" onclick="generatePoem()">
+             ✨ Create Another
+         </button>`;
+}
