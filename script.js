@@ -42,7 +42,7 @@ async function loadTemplates() {
         ) {
 
             status.textContent =
-                "⚠️ Add your templates.json Raw URL in script.js";
+                "⚠️ Add your templates.jason Raw URL in script.js";
 
             return;
         }
