@@ -538,3 +538,105 @@ body.theme-rose {
         font-size: 27px;
     }
 }
+
+/* ==========================================
+   LOVE SIGNATURE
+========================================== */
+
+.signature-generator {
+    margin-top: 30px;
+    padding: 25px;
+    background: white;
+    border-radius: 20px;
+    box-shadow: 0 10px 25px rgba(0,0,0,.15);
+    text-align: center;
+}
+
+.signature-generator p {
+    color: #777;
+    margin-bottom: 15px;
+}
+
+#signatureResult {
+    margin-top: 25px;
+}
+
+.signature-card {
+    padding: 30px 15px;
+    border-radius: 18px;
+    background: linear-gradient(
+        135deg,
+        #fff0f6,
+        #ffe0ec
+    );
+    overflow: hidden;
+    animation: signatureAppear .8s ease;
+}
+
+.signature-text {
+    font-family: "Brush Script MT", "Segoe Script", cursive;
+    font-size: 38px;
+    color: #e91e63;
+    word-break: break-word;
+    animation: signatureWrite 1.5s ease;
+}
+
+.signature-subtitle {
+    margin-top: 12px;
+    color: #a83268;
+    font-size: 14px;
+}
+
+.signature-sparkle {
+    font-size: 24px;
+    margin: 8px;
+    display: inline-block;
+    animation: sparkleFloat 1.5s infinite alternate;
+}
+
+@keyframes signatureAppear {
+    from {
+        opacity: 0;
+        transform: scale(.8);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+@keyframes signatureWrite {
+    from {
+        opacity: 0;
+        transform: translateX(-40px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes sparkleFloat {
+    from {
+        transform: translateY(0);
+        opacity: .5;
+    }
+
+    to {
+        transform: translateY(-8px);
+        opacity: 1;
+    }
+}
+
+.signature-actions {
+    display: flex;
+    gap: 10px;
+    margin-top: 15px;
+}
+
+.signature-actions button {
+    margin-top: 0;
+    font-size: 14px;
+}
