@@ -1185,45 +1185,66 @@ async function sendAIMessage() {
         messages.scrollHeight;
 
 
-    /* TEMPORARY RESPONSE */
+    /* AI RESPONSE */
 
-    button.disabled = true;
+button.disabled = true;
+status.textContent = "💭 Thinking...";
 
-    status.textContent =
-        "💭 Thinking...";
+try {
+    const response = await fetch(
+        "https://dreams-ai-chart.muthupandi2011muthu.workers.dev/",
+        {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify({
+                message: userText
+            })
+        }
+    );
 
+    const data = await response.json();
 
-    /*
-       The real OpenAI request will be
-       connected here later.
-    */
+    if (!response.ok) {
+        throw new Error(data.error || "AI request failed.");
+    }
 
-    setTimeout(function() {
+    const aiMessage =
+        document.createElement("div");
 
-        const aiMessage =
-            document.createElement("div");
+    aiMessage.className =
+        "ai-message";
 
-        aiMessage.className =
-            "ai-message";
+    aiMessage.innerHTML =
+        `<strong>💕 Love Assistant:</strong>
+         <p>${escapeAIText(data.reply)}</p>`;
 
-        aiMessage.innerHTML =
-            `<strong>💕 Love Assistant:</strong>
-             <p>
-             I'm ready to help! The AI connection
-             will be added in the next step. ❤️
-             </p>`;
+    messages.appendChild(aiMessage);
 
-        messages.appendChild(aiMessage);
+    messages.scrollTop =
+        messages.scrollHeight;
 
-        messages.scrollTop =
-            messages.scrollHeight;
+} catch (error) {
 
-        button.disabled = false;
+    const aiMessage =
+        document.createElement("div");
 
-        status.textContent = "";
+    aiMessage.className =
+        "ai-message";
 
-    }, 700);
+    aiMessage.innerHTML =
+        `<strong>💕 Love Assistant:</strong>
+         <p>Sorry, I couldn't connect to the AI right now. Please try again.</p>`;
+
+    messages.appendChild(aiMessage);
+
+    messages.scrollTop =
+        messages.scrollHeight;
 }
+
+button.disabled = false;
+status.textContent = "";
 
 
 /* ==========================================
