@@ -54,8 +54,33 @@ async function loadTemplates() {
             );
         }
 
-        templates =
-            await response.json();
+        const text = await response.text();
+
+let fixedText = "";
+let insideString = false;
+let escaped = false;
+
+for (const char of text) {
+
+    if (char === '"' && !escaped) {
+        insideString = !insideString;
+    }
+
+    if (char === "\n" && insideString) {
+        fixedText += "\\n";
+    } else if (char !== "\r") {
+        fixedText += char;
+    }
+
+    escaped =
+        char === "\\" && !escaped;
+
+    if (char !== "\\") {
+        escaped = false;
+    }
+}
+
+templates = JSON.parse(fixedText);
 
         if (!Array.isArray(templates)) {
 
