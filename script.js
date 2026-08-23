@@ -1184,7 +1184,175 @@ ${endings[Math.floor(Math.random() * endings.length)]}
     `;
 }
 
+/* ==========================================
+   LOVE SIGNATURE
+========================================== */
 
+function generateLoveSignature() {
+
+    const yourName =
+        document.getElementById(
+            "signatureYourName"
+        ).value.trim();
+
+    const crushName =
+        document.getElementById(
+            "signatureCrushName"
+        ).value.trim();
+
+    const style =
+        document.getElementById(
+            "signatureStyle"
+        ).value;
+
+    const result =
+        document.getElementById(
+            "signatureResult"
+        );
+
+    if (!yourName || !crushName) {
+
+        result.innerHTML = `
+            <p>💕 Please enter both names first.</p>
+        `;
+
+        return;
+    }
+
+    let signature = "";
+
+    if (style === "heart") {
+
+        signature =
+            `${yourName} ❤️ ${crushName}`;
+
+    } else if (style === "infinity") {
+
+        signature =
+            `${yourName} ♾️ ${crushName}`;
+
+    } else if (style === "forever") {
+
+        signature =
+            `${yourName} ✨ ${crushName}`;
+
+    } else if (style === "initials") {
+
+        const first =
+            yourName.charAt(0).toUpperCase();
+
+        const second =
+            crushName.charAt(0).toUpperCase();
+
+        signature =
+            `${first} 💕 ${second}`;
+
+    } else {
+
+        signature =
+            `${yourName} 🌹 ${crushName}`;
+    }
+
+    result.innerHTML = `
+        <div class="signature-card">
+
+            <div class="signature-sparkle">
+                ✨
+            </div>
+
+            <div
+                id="generatedSignature"
+                class="signature-text"
+            >
+                ${signature}
+            </div>
+
+            <div class="signature-sparkle">
+                ✨
+            </div>
+
+            <p class="signature-subtitle">
+                A little signature made from two names ❤️
+            </p>
+
+            <div class="signature-actions">
+
+                <button
+                    type="button"
+                    onclick="copyLoveSignature()"
+                >
+                    📋 Copy
+                </button>
+
+                <button
+                    type="button"
+                    onclick="generateLoveSignature()"
+                >
+                    🔄 Another
+                </button>
+
+            </div>
+
+        </div>
+    `;
+}
+
+
+/* ==========================================
+   COPY LOVE SIGNATURE
+========================================== */
+
+function copyLoveSignature() {
+
+    const signature =
+        document.getElementById(
+            "generatedSignature"
+        );
+
+    if (!signature) {
+        return;
+    }
+
+    const text =
+        signature.textContent.trim();
+
+    if (
+        navigator.clipboard &&
+        window.isSecureContext
+    ) {
+
+        navigator.clipboard
+            .writeText(text)
+            .then(function() {
+
+                alert(
+                    "Love signature copied! ✨"
+                );
+
+            });
+
+    } else {
+
+        const area =
+            document.createElement(
+                "textarea"
+            );
+
+        area.value = text;
+
+        document.body.appendChild(area);
+
+        area.select();
+
+        document.execCommand("copy");
+
+        area.remove();
+
+        alert(
+            "Love signature copied! ✨"
+        );
+    }
+}
 /* ==========================================
    START
 ========================================== */
@@ -1195,3 +1363,4 @@ document.addEventListener(
         loadTemplates();
     }
 );
+
