@@ -3,7 +3,7 @@
 ========================================== */
 
 const TEMPLATE_URL =
-    "PASTE_YOUR_RAW_TEMPLATES_URL_HERE";
+    "https://raw.githubusercontent.com/Muthu-11-devil/Dreams-of-two-heart/refs/heads/main/templates.jason";
 
 let templates = [];
 
