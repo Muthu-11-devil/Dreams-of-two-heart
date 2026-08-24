@@ -1464,3 +1464,107 @@ function escapeMovieHTML(text) {
         .replace(/"/g, "&quot;")
         .replace(/'/g, "&#039;");
 }
+
+/* ==========================================
+   ONE MINUTE BEFORE - INTERACTIVE MOVIE
+========================================== */
+
+let movieTimer = null;
+let movieTime = 60;
+
+const movieScenes = [
+    { time: 60, text: "🎬 One minute before everything changes..." },
+    { time: 50, text: "💭 There is something I've been wanting to say." },
+    { time: 40, text: "✨ Every little moment brought me here." },
+    { time: 30, text: "💕 Maybe you already know what I'm thinking..." },
+    { time: 20, text: "❤️ My heart has been keeping a little secret." },
+    { time: 10, text: "💌 Ten seconds until the moment..." },
+    { time: 5, text: "🌹 Almost there..." },
+    { time: 3, text: "3..." },
+    { time: 2, text: "2..." },
+    { time: 1, text: "1..." }
+];
+
+function startOneMinuteMovie() {
+
+    const screen = document.getElementById("movieScreen");
+    const countdown = document.getElementById("movieCountdown");
+    const scene = document.getElementById("movieScene");
+    const progress = document.getElementById("movieProgressFill");
+
+    if (!screen || !countdown || !scene || !progress) {
+        alert("Movie section is missing from index.html");
+        return;
+    }
+
+    clearInterval(movieTimer);
+
+    movieTime = 60;
+
+    screen.classList.remove("hidden");
+
+    countdown.textContent = movieTime;
+    scene.textContent = movieScenes[0].text;
+    progress.style.width = "0%";
+
+    movieTimer = setInterval(function () {
+
+        movieTime--;
+
+        countdown.textContent = movieTime;
+
+        const percentage = ((60 - movieTime) / 60) * 100;
+        progress.style.width = percentage + "%";
+
+        const currentScene = movieScenes.find(
+            scene => scene.time === movieTime
+        );
+
+        if (currentScene) {
+            document.getElementById("movieScene").textContent =
+                currentScene.text;
+        }
+
+        if (movieTime <= 0) {
+
+            clearInterval(movieTimer);
+
+            countdown.textContent = "❤️";
+
+            scene.textContent =
+                "💖 The moment has arrived...";
+
+            progress.style.width = "100%";
+
+            setTimeout(function () {
+
+                skipToProposal();
+
+            }, 2000);
+        }
+
+    }, 1000);
+}
+
+
+function skipToProposal() {
+
+    clearInterval(movieTimer);
+
+    const screen = document.getElementById("movieScreen");
+
+    if (screen) {
+        screen.classList.add("hidden");
+    }
+
+    const envelope = document.getElementById("envelopeSection");
+
+    if (envelope) {
+        envelope.classList.remove("hidden");
+
+        envelope.scrollIntoView({
+            behavior: "smooth",
+            block: "center"
+        });
+    }
+}
