@@ -1184,3 +1184,283 @@ ${endings[Math.floor(Math.random() * endings.length)]}
     `;
 }
 
+/* ==========================================
+   ONE MINUTE BEFORE - INTERACTIVE MOVIE
+========================================== */
+
+let movieTimer = null;
+let movieTime = 60;
+
+
+/* START MOVIE */
+
+function startOneMinuteMovie() {
+
+    clearInterval(movieTimer);
+
+    movieTime = 60;
+
+    const screen =
+        document.getElementById("movieScreen");
+
+    const countdown =
+        document.getElementById("movieCountdown");
+
+    const scene =
+        document.getElementById("movieScene");
+
+    const progress =
+        document.getElementById("movieProgressFill");
+
+    screen.classList.remove("hidden");
+
+    countdown.textContent = movieTime;
+
+    progress.style.width = "0%";
+
+    showMovieScene(movieTime);
+
+    movieTimer = setInterval(function() {
+
+        movieTime--;
+
+        countdown.textContent = movieTime;
+
+        const percentage =
+            ((60 - movieTime) / 60) * 100;
+
+        progress.style.width =
+            percentage + "%";
+
+        showMovieScene(movieTime);
+
+        if (movieTime <= 0) {
+
+            clearInterval(movieTimer);
+
+            showFinalMovieProposal();
+        }
+
+    }, 1000);
+}
+
+
+/* MOVIE SCENES */
+
+function showMovieScene(time) {
+
+    const scene =
+        document.getElementById("movieScene");
+
+    let message = "";
+
+    if (time === 60) {
+
+        message =
+            "🎬 Every beautiful story has a beginning...";
+
+    } else if (time === 55) {
+
+        message =
+            "✨ Sometimes, one person quietly becomes special.";
+
+    } else if (time === 50) {
+
+        message =
+            proposalData.crushName
+                ? `💕 And then there was ${proposalData.crushName}...`
+                : "💕 And then, someone special appeared...";
+
+    } else if (time === 45) {
+
+        message =
+            "🌸 Ordinary moments started feeling different.";
+
+    } else if (time === 40) {
+
+        message =
+            proposalData.crushName
+                ? `✨ Every thought somehow found its way back to ${proposalData.crushName}.`
+                : "✨ Every thought somehow found its way back to them.";
+
+    } else if (time === 35) {
+
+        message =
+            "💭 A smile. A conversation. A memory.";
+
+    } else if (time === 30) {
+
+        message =
+            proposalData.years &&
+            proposalData.years !== "some time"
+                ? `❤️ ${proposalData.years} years of feelings...`
+                : "❤️ Feelings that kept growing...";
+
+    } else if (time === 25) {
+
+        message =
+            "🌙 And now... there is something left to say.";
+
+    } else if (time === 20) {
+
+        message =
+            "💌 Something that has been waiting for the right moment.";
+
+    } else if (time === 15) {
+
+        message =
+            "❤️ Almost time...";
+
+    } else if (time === 10) {
+
+        message =
+            "✨ Get ready...";
+
+    } else if (time <= 9 && time > 5) {
+
+        message =
+            "The moment is getting closer... ❤️";
+
+    } else if (time <= 5 && time > 0) {
+
+        message =
+            "💗 " + time + "...";
+
+    }
+
+    if (message) {
+
+        scene.classList.remove("movie-final");
+
+        scene.style.animation = "none";
+
+        void scene.offsetWidth;
+
+        scene.style.animation =
+            "sceneFade 1s ease";
+
+        scene.textContent = message;
+    }
+}
+
+
+/* FINAL PROPOSAL */
+
+function showFinalMovieProposal() {
+
+    const screen =
+        document.getElementById("movieScreen");
+
+    const name =
+        proposalData.crushName ||
+        "You";
+
+    const yourName =
+        proposalData.yourName ||
+        "Someone";
+
+    const custom =
+        proposalData.customMessage;
+
+    screen.innerHTML = `
+
+        <div class="movie-final">
+
+            <div class="movie-final-heart">
+                ❤️
+            </div>
+
+            <div class="movie-final-title">
+                ${escapeMovieHTML(name)}
+            </div>
+
+            <div class="movie-final-message">
+
+                ${custom
+                    ? escapeMovieHTML(custom)
+                    : `After everything I've felt,
+                       I finally found the courage
+                       to say this...<br><br>
+                       You are truly special to me. ❤️`
+                }
+
+                <br><br>
+
+                <strong>
+                    — ${escapeMovieHTML(yourName)}
+                </strong>
+
+            </div>
+
+            <button
+                type="button"
+                onclick="closeMovie()"
+            >
+                💕 Close Movie
+            </button>
+
+        </div>
+    `;
+}
+
+
+/* SKIP */
+
+function skipToProposal() {
+
+    clearInterval(movieTimer);
+
+    movieTime = 0;
+
+    showFinalMovieProposal();
+}
+
+
+/* CLOSE */
+
+function closeMovie() {
+
+    clearInterval(movieTimer);
+
+    const screen =
+        document.getElementById("movieScreen");
+
+    screen.classList.add("hidden");
+
+    screen.innerHTML = `
+
+        <div id="movieCountdown"
+             class="movie-countdown">
+            60
+        </div>
+
+        <div id="movieScene"
+             class="movie-scene">
+            Get ready... ❤️
+        </div>
+
+        <div id="movieProgress">
+            <div id="movieProgressFill"></div>
+        </div>
+
+        <button
+            id="skipMovieButton"
+            type="button"
+            onclick="skipToProposal()">
+            Skip to Proposal ❤️
+        </button>
+    `;
+}
+
+
+/* SECURITY */
+
+function escapeMovieHTML(text) {
+
+    return String(text)
+        .replace(/&/g, "&amp;")
+        .replace(/</g, "&lt;")
+        .replace(/>/g, "&gt;")
+        .replace(/"/g, "&quot;")
+        .replace(/'/g, "&#039;");
+}
