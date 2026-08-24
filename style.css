@@ -538,3 +538,234 @@ body.theme-rose {
         font-size: 27px;
     }
 }
+
+/* ==========================================
+   ONE MINUTE BEFORE - INTERACTIVE MOVIE
+========================================== */
+
+.movie-box {
+    margin-top: 30px;
+    padding: 25px;
+    background: white;
+    border-radius: 20px;
+    box-shadow: 0 10px 25px rgba(0,0,0,.15);
+    text-align: center;
+}
+
+.movie-box h2 {
+    margin-bottom: 10px;
+}
+
+.movie-box > p {
+    color: #777;
+    line-height: 1.6;
+}
+
+.movie-screen {
+    position: relative;
+    min-height: 500px;
+    margin-top: 20px;
+    padding: 30px 20px;
+
+    border-radius: 20px;
+
+    background:
+        radial-gradient(circle at center,
+        #3b175d 0%,
+        #170b2d 45%,
+        #05030d 100%);
+
+    color: white;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    overflow: hidden;
+
+    animation: movieAppear .8s ease;
+}
+
+@keyframes movieAppear {
+    from {
+        opacity: 0;
+        transform: scale(.9);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+.movie-screen::before {
+    content: "✦  ✧  ✦  ✧  ✦  ✧  ✦";
+    position: absolute;
+    top: 25px;
+    left: 0;
+    width: 100%;
+    text-align: center;
+    color: rgba(255,255,255,.4);
+    font-size: 20px;
+    letter-spacing: 8px;
+}
+
+.movie-countdown {
+    font-size: 90px;
+    font-weight: bold;
+    color: #ff80ab;
+
+    text-shadow:
+        0 0 20px #ff4081,
+        0 0 40px #e91e63;
+
+    margin-bottom: 30px;
+
+    animation: countdownPulse 1s infinite;
+}
+
+@keyframes countdownPulse {
+    0% {
+        transform: scale(1);
+        opacity: .8;
+    }
+
+    50% {
+        transform: scale(1.12);
+        opacity: 1;
+    }
+
+    100% {
+        transform: scale(1);
+        opacity: .8;
+    }
+}
+
+.movie-scene {
+    width: 90%;
+    min-height: 180px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    text-align: center;
+
+    font-size: 24px;
+    line-height: 1.7;
+
+    color: #fff;
+
+    animation: sceneFade 1s ease;
+}
+
+@keyframes sceneFade {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+#movieProgress {
+    width: 85%;
+    height: 8px;
+
+    margin-top: 30px;
+
+    background: rgba(255,255,255,.2);
+    border-radius: 20px;
+
+    overflow: hidden;
+}
+
+#movieProgressFill {
+    width: 0%;
+    height: 100%;
+
+    background: linear-gradient(
+        90deg,
+        #ff80ab,
+        #ff4081
+    );
+
+    transition: width 1s linear;
+}
+
+#skipMovieButton {
+    width: auto;
+    padding: 10px 20px;
+
+    margin-top: 25px;
+
+    background: rgba(255,255,255,.15);
+    border: 1px solid rgba(255,255,255,.3);
+}
+
+#skipMovieButton:hover {
+    background: rgba(255,255,255,.25);
+}
+
+/* FINAL PROPOSAL */
+
+.movie-final {
+    animation: finalProposal 1.5s ease;
+}
+
+@keyframes finalProposal {
+    0% {
+        opacity: 0;
+        transform: scale(.5);
+    }
+
+    60% {
+        transform: scale(1.1);
+    }
+
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+.movie-final-heart {
+    font-size: 80px;
+    margin-bottom: 20px;
+    animation: heartbeat 1s infinite;
+}
+
+.movie-final-title {
+    font-size: 34px;
+    color: #ff80ab;
+    margin-bottom: 20px;
+}
+
+.movie-final-message {
+    max-width: 450px;
+    font-size: 20px;
+    line-height: 1.8;
+}
+
+@media (max-width: 600px) {
+
+    .movie-screen {
+        min-height: 450px;
+    }
+
+    .movie-countdown {
+        font-size: 70px;
+    }
+
+    .movie-scene {
+        font-size: 20px;
+    }
+
+    .movie-final-title {
+        font-size: 28px;
+    }
+}
