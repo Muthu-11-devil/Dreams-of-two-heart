@@ -203,6 +203,44 @@
 
         </section>
 
+<!-- ONE MINUTE BEFORE -->
+<section class="movie-box">
+
+    <h2>🎬 One Minute Before...</h2>
+
+    <p>
+        Turn your proposal into a one-minute interactive movie. ❤️
+    </p>
+
+    <button type="button" onclick="startOneMinuteMovie()">
+        🎬 Start the Movie
+    </button>
+
+    <div id="movieScreen" class="movie-screen hidden">
+
+        <div id="movieCountdown" class="movie-countdown">
+            60
+        </div>
+
+        <div id="movieScene" class="movie-scene">
+            Get ready... ❤️
+        </div>
+
+        <div id="movieProgress">
+            <div id="movieProgressFill"></div>
+        </div>
+
+        <button
+            id="skipMovieButton"
+            type="button"
+            onclick="skipToProposal()"
+        >
+            Skip to Proposal ❤️
+        </button>
+
+    </div>
+
+</section>
 
         <!-- LOVE SKY -->
         <section class="star-section">
