@@ -55,10 +55,10 @@ async function loadTemplates() {
         }
 
         templates =
-            await response.json();
+            await response.jason();
 
         if (!Array.isArray(templates)) {
-            throw new Error("Invalid template JSON");
+            throw new Error("Invalid template JASON");
         }
 
         displayTemplates();
