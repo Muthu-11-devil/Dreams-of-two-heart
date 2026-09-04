@@ -1187,3 +1187,162 @@ ${endings[Math.floor(Math.random() * endings.length)]}
 document.addEventListener("DOMContentLoaded", function () {
     loadTemplates();
 });
+
+// ================================
+// 🔐 FUTURE ME — TIME CAPSULE
+// ================================
+
+let capsuleTimer;
+
+function sealTimeCapsule() {
+    const name = document.getElementById("capsuleName").value.trim();
+    const memory = document.getElementById("capsuleMemory").value.trim();
+    const message = document.getElementById("capsuleMessage").value.trim();
+    const unlockDate = document.getElementById("capsuleDate").value;
+
+    if (!message) {
+        alert("💭 Please write your message first.");
+        return;
+    }
+
+    if (!unlockDate) {
+        alert("📅 Please choose an unlock date.");
+        return;
+    }
+
+    const selectedDate = new Date(unlockDate + "T00:00:00");
+
+    if (selectedDate <= new Date()) {
+        alert("⏳ Please choose a future date.");
+        return;
+    }
+
+    const capsule = {
+        name: name,
+        memory: memory,
+        message: message,
+        unlockDate: selectedDate.getTime(),
+        createdDate: new Date().toLocaleDateString()
+    };
+
+    localStorage.setItem("futureMeCapsule", JSON.stringify(capsule));
+
+    showLockedCapsule(capsule);
+
+    alert("🔐 Your Time Capsule has been sealed!");
+}
+
+function showLockedCapsule(capsule) {
+    document.getElementById("capsuleForm").style.display = "none";
+    document.getElementById("capsuleLocked").classList.remove("capsule-hidden");
+    document.getElementById("capsuleOpened").classList.add("capsule-hidden");
+
+    document.getElementById("capsuleLockedText").textContent =
+        capsule.name
+            ? `${capsule.name}, your message is safely sealed.`
+            : "Your message is safely sealed.";
+
+    updateCapsuleCountdown(capsule);
+
+    if (capsuleTimer) {
+        clearInterval(capsuleTimer);
+    }
+
+    capsuleTimer = setInterval(function () {
+        updateCapsuleCountdown(capsule);
+    }, 1000);
+}
+
+function updateCapsuleCountdown(capsule) {
+    const now = new Date().getTime();
+    const difference = capsule.unlockDate - now;
+
+    const countdown = document.getElementById("capsuleCountdown");
+    const button = document.getElementById("openCapsuleButton");
+
+    if (difference <= 0) {
+        countdown.textContent = "✨ Your capsule is ready!";
+        button.disabled = false;
+        button.textContent = "💌 Open My Time Capsule";
+
+        clearInterval(capsuleTimer);
+        return;
+    }
+
+    const days = Math.floor(difference / (1000 * 60 * 60 * 24));
+    const hours = Math.floor(
+        (difference / (1000 * 60 * 60)) % 24
+    );
+    const minutes = Math.floor(
+        (difference / (1000 * 60)) % 60
+    );
+    const seconds = Math.floor(
+        (difference / 1000) % 60
+    );
+
+    countdown.textContent =
+        `⏳ ${days}d ${hours}h ${minutes}m ${seconds}s`;
+}
+
+function openTimeCapsule() {
+    const savedCapsule = localStorage.getItem("futureMeCapsule");
+
+    if (!savedCapsule) {
+        alert("🔐 No Time Capsule found.");
+        return;
+    }
+
+    const capsule = JSON.parse(savedCapsule);
+
+    if (new Date().getTime() < capsule.unlockDate) {
+        alert("⏳ Your capsule is still locked.");
+        return;
+    }
+
+    document.getElementById("capsuleLocked").classList.add("capsule-hidden");
+    document.getElementById("capsuleOpened").classList.remove("capsule-hidden");
+
+    document.getElementById("revealedCapsuleName").textContent =
+        capsule.name
+            ? `❤️ For: ${capsule.name}`
+            : "";
+
+    document.getElementById("revealedCapsuleMemory").textContent =
+        capsule.memory
+            ? `🌸 Memory: ${capsule.memory}`
+            : "";
+
+    document.getElementById("revealedCapsuleMessage").textContent =
+        capsule.message;
+
+    document.getElementById("capsuleCreatedDate").textContent =
+        `Written on ${capsule.createdDate} 💫`;
+
+    localStorage.removeItem("futureMeCapsule");
+}
+
+function loadTimeCapsule() {
+    const savedCapsule = localStorage.getItem("futureMeCapsule");
+
+    if (!savedCapsule) {
+        return;
+    }
+
+    try {
+        const capsule = JSON.parse(savedCapsule);
+
+        if (new Date().getTime() >= capsule.unlockDate) {
+            showLockedCapsule(capsule);
+            updateCapsuleCountdown(capsule);
+        } else {
+            showLockedCapsule(capsule);
+        }
+    } catch (error) {
+        console.error("Time Capsule error:", error);
+        localStorage.removeItem("futureMeCapsule");
+    }
+}
+
+document.addEventListener("DOMContentLoaded", function () {
+    loadTimeCapsule();
+});
