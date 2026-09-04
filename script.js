@@ -1183,3 +1183,7 @@ ${endings[Math.floor(Math.random() * endings.length)]}
         </div>
     `;
 }
+
+document.addEventListener("DOMContentLoaded", function () {
+    loadTemplates();
+});
