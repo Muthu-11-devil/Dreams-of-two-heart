@@ -1183,5 +1183,3 @@ ${endings[Math.floor(Math.random() * endings.length)]}
         </div>
     `;
 }
-
-/*
