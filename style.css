@@ -540,3 +540,87 @@ body.theme-rose {
 }
 
 /*
+
+/* ================================
+   🔐 FUTURE ME — TIME CAPSULE
+================================ */
+
+.time-capsule-box {
+    margin: 30px auto;
+    padding: 30px 20px;
+    max-width: 700px;
+    text-align: center;
+    border-radius: 25px;
+    background: linear-gradient(135deg, #fff0f6, #f8eaff);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.12);
+}
+
+.time-capsule-box h2 {
+    margin-bottom: 10px;
+}
+
+.time-capsule-box label {
+    display: block;
+    margin-top: 18px;
+    margin-bottom: 6px;
+    font-weight: bold;
+}
+
+.time-capsule-box input,
+.time-capsule-box textarea {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 12px;
+    border: 2px solid #f3c4d9;
+    border-radius: 12px;
+    font-size: 16px;
+    outline: none;
+}
+
+.time-capsule-box textarea {
+    min-height: 130px;
+    resize: vertical;
+}
+
+.time-capsule-box button {
+    margin-top: 20px;
+    padding: 13px 22px;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.capsule-hidden {
+    display: none !important;
+}
+
+.capsule-icon {
+    font-size: 60px;
+    margin: 15px 0;
+}
+
+#capsuleCountdown {
+    margin: 20px 0;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+#openCapsuleButton:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+.capsule-message {
+    margin: 20px 0;
+    padding: 20px;
+    border-radius: 18px;
+    background: rgba(255, 255, 255, 0.8);
+    line-height: 1.7;
+}
+
+#revealedCapsuleMessage {
+    white-space: pre-wrap;
+    word-wrap: break-word;
+}
