@@ -172,6 +172,84 @@
 </section>
 
 
+
+<section class="time-capsule-box">
+    <h2>🔐 Future Me — Time Capsule</h2>
+
+    <p>
+        Write a message today and seal it for your future self. 💌
+    </p>
+
+    <div id="capsuleForm">
+
+        <label for="capsuleName">❤️ Name</label>
+        <input
+            type="text"
+            id="capsuleName"
+            placeholder="Enter a name"
+            maxlength="40"
+        >
+
+        <label for="capsuleMemory">🌸 A memory from today</label>
+        <input
+            type="text"
+            id="capsuleMemory"
+            placeholder="What do you want to remember?"
+            maxlength="150"
+        >
+
+        <label for="capsuleMessage">💭 Your future message</label>
+        <textarea
+            id="capsuleMessage"
+            placeholder="Write something for your future self..."
+            maxlength="1000"
+        ></textarea>
+
+        <label for="capsuleDate">📅 Unlock date</label>
+        <input type="date" id="capsuleDate">
+
+        <button type="button" onclick="sealTimeCapsule()">
+            🔒 Seal My Time Capsule
+        </button>
+    </div>
+
+    <div id="capsuleLocked" class="capsule-hidden">
+        <div class="capsule-icon">🔐</div>
+
+        <h3>Your memory is sealed</h3>
+
+        <p id="capsuleLockedText"></p>
+
+        <div id="capsuleCountdown"></div>
+
+        <button
+            type="button"
+            id="openCapsuleButton"
+            onclick="openTimeCapsule()"
+            disabled
+        >
+            🔒 Still Locked
+        </button>
+    </div>
+
+    <div id="capsuleOpened" class="capsule-hidden">
+        <div class="capsule-icon">💌</div>
+
+        <h3>✨ Your Time Capsule Is Open ✨</h3>
+
+        <p id="revealedCapsuleName"></p>
+
+        <p id="revealedCapsuleMemory"></p>
+
+        <div class="capsule-message">
+            <p id="revealedCapsuleMessage"></p>
+        </div>
+
+        <p id="capsuleCreatedDate"></p>
+    </div>
+</section>
+
+
         <!-- LOVE STORY -->
         <section class="story-box">
 
