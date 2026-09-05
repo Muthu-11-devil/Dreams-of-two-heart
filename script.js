@@ -1302,6 +1302,26 @@ function openTimeCapsule() {
     document.getElementById("capsuleLocked").classList.add("capsule-hidden");
     document.getElementById("capsuleOpened").classList.remove("capsule-hidden");
 
+const rememberMessage = document.getElementById("rememberMessage");
+
+const daysPassed = Math.floor(
+    (Date.now() - new Date(capsule.unlockDate).getTime()) /
+    (1000 * 60 * 60 * 24)
+);
+
+if (daysPassed <= 1) {
+    rememberMessage.textContent =
+        "🌸 Remember this moment. You created this little time capsule because this moment mattered to you. Hold on to that feeling.";
+} else if (daysPassed <= 30) {
+    rememberMessage.textContent =
+        "💫 Time moved forward, but this memory stayed here waiting for you. Remember what made this moment special.";
+} else if (daysPassed <= 365) {
+    rememberMessage.textContent =
+        "🕰️ A lot can change with time. Before reading your message, take a moment to remember who you were when you sealed this capsule.";
+} else {
+    rememberMessage.textContent =
+        "🌟 You finally came back to a moment from your past. Remember the dreams, feelings, and memories that brought you here.";
+}
     document.getElementById("revealedCapsuleName").textContent =
         capsule.name
             ? `❤️ For: ${capsule.name}`
@@ -1346,3 +1366,21 @@ function loadTimeCapsule() {
 document.addEventListener("DOMContentLoaded", function () {
     loadTimeCapsule();
 });
+
+function createNewMemory() {
+    localStorage.removeItem("futureMeCapsule");
+
+    document.getElementById("capsuleOpened").classList.add("capsule-hidden");
+    document.getElementById("capsuleLocked").classList.add("capsule-hidden");
+    document.getElementById("capsuleForm").style.display = "block";
+
+    document.getElementById("capsuleName").value = "";
+    document.getElementById("capsuleMemory").value = "";
+    document.getElementById("capsuleMessage").value = "";
+    document.getElementById("capsuleDate").value = "";
+
+    window.scrollTo({
+        top: document.querySelector(".time-capsule-box").offsetTop,
+        behavior: "smooth"
+    });
+}
