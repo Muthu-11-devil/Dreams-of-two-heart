@@ -325,24 +325,22 @@ if ("serviceWorker" in navigator) {
 
 
         <!-- FEEDBACK -->
-        <section class="feedback">
+<section class="feedback">
 
-            <h2>💬 Your Feedback</h2>
+    <h2>💬 Your Feedback</h2>
 
-            <textarea
-                id="feedbackText"
-                placeholder="Tell us what you think..."
-            ></textarea>
+    <p>
+        We'd love to hear what you think about Dreams of Two Hearts. 💗
+    </p>
 
-            <button onclick="submitFeedback()">
-                Submit Feedback ❤️
-            </button>
+    <button
+        type="button"
+        onclick="window.open('https://docs.google.com/forms/d/e/1FAIpQLSfE7dzgFlLcjAnvcWNm-NzfvkdIRZvjy9pN7SNrUimoO5X8Ng/viewform', '_blank')"
+    >
+        💌 Send Feedback
+    </button>
 
-            <p id="feedbackMessage"></p>
-
-        </section>
-
-
+</section>
         <button class="another-button" onclick="location.reload()">
             🔄 Generate Another
         </button>
