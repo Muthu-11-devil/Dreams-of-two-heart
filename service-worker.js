@@ -1,4 +1,4 @@
-const CACHE_NAME = "dreams-of-two-hearts-v1";
+const CACHE_NAME = "dreams-of-two-hearts-v2";
 
 const FILES_TO_CACHE = [
     "./",
@@ -7,7 +7,8 @@ const FILES_TO_CACHE = [
     "./script.js",
     "./manifest.json",
     "./icon-192.png",
-    "./icon-512.png"
+    "./icon-512.png",
+    "./privacy-policy.html"
 ];
 
 self.addEventListener("install", event => {
