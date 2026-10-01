@@ -1197,3 +1197,19 @@ body.theme-rose {
         scroll-behavior: auto !important;
     }
 }
+
+/* ================================
+   ♿ KEYBOARD ACCESSIBILITY
+================================ */
+
+button:focus-visible,
+a:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible,
+.template-card:focus-visible,
+#envelope:focus-visible,
+#starSky span:focus-visible {
+    outline: 3px solid #e91e63;
+    outline-offset: 4px;
+}
