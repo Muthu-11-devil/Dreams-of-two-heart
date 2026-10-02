@@ -472,7 +472,13 @@ if ("serviceWorker" in navigator) {
 
         <p id="capsuleLockedText"></p>
 
-        <div id="capsuleCountdown"></div>
+        <div
+    id="capsuleCountdown"
+    role="timer"
+    aria-live="polite"
+    aria-atomic="true"
+    aria-label="Time Capsule countdown"
+></div>
 
         <button
             type="button"
