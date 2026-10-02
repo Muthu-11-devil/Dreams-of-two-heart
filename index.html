@@ -327,19 +327,31 @@ if ("serviceWorker" in navigator) {
 
         <div class="action-buttons">
 
-            <button onclick="downloadTxt()">
-                📥 Download Proposal
-            </button>
+    <button
+        type="button"
+        aria-label="Download your generated proposal"
+        onclick="downloadTxt()"
+    >
+        📥 Download Proposal
+    </button>
 
-            <button onclick="copyProposal()">
-                📋 Copy Proposal
-            </button>
+    <button
+        type="button"
+        aria-label="Copy your generated proposal"
+        onclick="copyProposal()"
+    >
+        📋 Copy Proposal
+    </button>
 
-            <button onclick="shareProposal()">
-                📱 Share Proposal
-            </button>
+    <button
+        type="button"
+        aria-label="Share your generated proposal"
+        onclick="shareProposal()"
+    >
+        📱 Share Proposal
+    </button>
 
-        </div>
+</div>
 
 <section class="poem-generator">
   <h2>✨ Create a Poem</h2>
