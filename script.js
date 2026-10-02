@@ -543,10 +543,15 @@ function animateLoveMeter() {
 
 
     fill.style.width =
-        "0%";
+    "0%";
 
-    number.textContent =
-        "0%";
+fill.setAttribute(
+    "aria-valuenow",
+    "0"
+);
+
+number.textContent =
+    "0%";
 
 
     let current = 0;
@@ -557,11 +562,16 @@ function animateLoveMeter() {
 
             current++;
 
-            fill.style.width =
-                current + "%";
+             fill.style.width =
+    current + "%";
 
-            number.textContent =
-                current + "%";
+fill.setAttribute(
+    "aria-valuenow",
+    current
+);
+
+number.textContent =
+    current + "%";
 
 
             if (current >= score) {
