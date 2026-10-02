@@ -357,10 +357,32 @@ if ("serviceWorker" in navigator) {
   <h2>✨ Create a Poem</h2>
   <p>Tell us a little about your special person.</p>
 
-  <input id="poemName" type="text" placeholder="Their name or nickname">
+  <label for="poemName">💗 Their Name or Nickname</label>
 
-  <input id="poemPersonality" type="text"
-         placeholder="Their personality">
+<input
+    id="poemName"
+    type="text"
+    placeholder="Their name or nickname"
+    aria-describedby="poemNameHelp"
+>
+
+<small id="poemNameHelp">
+    Enter the name or nickname you'd like to use in the poem.
+</small>
+
+
+<label for="poemPersonality">✨ Their Personality</label>
+
+<input
+    id="poemPersonality"
+    type="text"
+    placeholder="Their personality"
+    aria-describedby="poemPersonalityHelp"
+>
+
+<small id="poemPersonalityHelp">
+    Describe a few qualities that make them special.
+</small>
 
   <input id="poemInterests" type="text"
          placeholder="Their hobbies or interests">
