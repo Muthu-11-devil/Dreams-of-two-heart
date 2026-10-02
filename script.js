@@ -103,7 +103,10 @@ card.setAttribute(
     "aria-label",
     "Choose " + template.name + " proposal template"
 );
-
+card.setAttribute(
+    "aria-selected",
+    "false"
+);
         card.innerHTML = `
             <div class="template-icon">
                 ${template.icon}
