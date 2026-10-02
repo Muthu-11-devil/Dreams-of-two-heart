@@ -452,9 +452,13 @@ if ("serviceWorker" in navigator) {
     Choose the mood you want your poem to have.
 </small>
 
-  <button type="button" onclick="generatePoem()">
+  <button
+    type="button"
+    aria-label="Generate your poem"
+    onclick="generatePoem()"
+>
     ✨ Generate My Poem
-  </button>
+</button>
 
   <div
     id="poemResult"
