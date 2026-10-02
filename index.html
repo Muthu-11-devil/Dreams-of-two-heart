@@ -171,10 +171,22 @@ if ("serviceWorker" in navigator) {
     <section class="card" id="proposalCreator">
 
         <label for="yourName">Your Name</label>
-<input id="yourName" type="text" placeholder="Enter your name">
+<input
+    id="yourName"
+    type="text"
+    placeholder="Enter your name"
+    autocomplete="name"
+    required
+>
 
 <label for="crushName">Crush's Name</label>
-<input id="crushName" type="text" placeholder="Enter their name">
+<input
+    id="crushName"
+    type="text"
+    placeholder="Enter their name"
+    autocomplete="off"
+    required
+>
 
 <label for="years">How many years have you loved them?</label>
 <input id="years" type="number" min="0" step="0.1" placeholder="Example: 3">
