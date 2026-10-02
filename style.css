@@ -1213,3 +1213,14 @@ textarea:focus-visible,
     outline: 3px solid #e91e63;
     outline-offset: 4px;
 }
+ /* ================================
+   ♿ PHOTO UPLOAD ACCESSIBILITY
+================================ */
+
+#photoHelp {
+    display: block;
+    margin-top: 7px;
+    color: var(--muted);
+    font-size: 13px;
+    line-height: 1.5;
+}
