@@ -384,11 +384,31 @@ if ("serviceWorker" in navigator) {
     Describe a few qualities that make them special.
 </small>
 
-  <input id="poemInterests" type="text"
-         placeholder="Their hobbies or interests">
+  <label for="poemInterests">🎨 Hobbies or Interests</label>
 
-  <textarea id="poemLikes"
-            placeholder="What do you like about your crush?"></textarea>
+<input
+    id="poemInterests"
+    type="text"
+    placeholder="Their hobbies or interests"
+    aria-describedby="poemInterestsHelp"
+>
+
+<small id="poemInterestsHelp">
+    Add hobbies, interests, or things they enjoy.
+</small>
+
+
+<label for="poemLikes">💗 What Do You Like About Them?</label>
+
+<textarea
+    id="poemLikes"
+    placeholder="What do you like about them?"
+    aria-describedby="poemLikesHelp"
+></textarea>
+
+<small id="poemLikesHelp">
+    Share what you appreciate about this person.
+</small>
 
   <textarea id="poemMemory"
             placeholder="A favorite memory"></textarea>
