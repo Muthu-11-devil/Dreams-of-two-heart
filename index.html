@@ -480,14 +480,15 @@ if ("serviceWorker" in navigator) {
     aria-label="Time Capsule countdown"
 ></div>
 
-        <button
-            type="button"
-            id="openCapsuleButton"
-            onclick="openTimeCapsule()"
-            disabled
-        >
-            🔒 Still Locked
-        </button>
+         <button
+    type="button"
+    id="openCapsuleButton"
+    aria-label="Open your Time Capsule when it is unlocked"
+    onclick="openTimeCapsule()"
+    disabled
+>
+    🔒 Still Locked
+</button>
     </div>
 <div id="capsuleOpened" class="capsule-hidden">
     <div class="capsule-icon">💌</div>
@@ -506,9 +507,13 @@ if ("serviceWorker" in navigator) {
 
     <p id="capsuleCreatedDate"></p>
 
-    <button type="button" onclick="createNewMemory()">
-        🌱 Create a New Memory
-    </button>
+    <button
+    type="button"
+    aria-label="Create a new Future Me memory"
+    onclick="createNewMemory()"
+>
+    🌱 Create a New Memory
+</button>
 </div>
     
 </section>
