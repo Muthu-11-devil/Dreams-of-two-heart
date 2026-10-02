@@ -459,7 +459,13 @@ if ("serviceWorker" in navigator) {
         </button>
     </div>
 
-    <div id="capsuleLocked" class="capsule-hidden">
+    <div
+    id="capsuleLocked"
+    class="capsule-hidden"
+    role="status"
+    aria-live="polite"
+    aria-atomic="true"
+>
         <div class="capsule-icon">🔐</div>
 
         <h3>Your memory is sealed</h3>
