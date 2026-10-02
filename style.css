@@ -1248,3 +1248,12 @@ textarea:focus-visible,
     font-size: 13px;
     line-height: 1.5;
 }
+
+#capsuleNameHelp,
+#capsuleMemoryHelp {
+    display: block;
+    margin-top: 7px;
+    color: var(--muted);
+    font-size: 13px;
+    line-height: 1.5;
+}
