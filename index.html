@@ -597,9 +597,14 @@ if ("serviceWorker" in navigator) {
       onclick="starMessage(6)"
       onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();starMessage(6)}">⭐</span>
 
-                <div id="starMessage">
-                    Tap a star 💫
-                </div>
+                  <div
+    id="starMessage"
+    role="status"
+    aria-live="polite"
+    aria-atomic="true"
+>
+    Tap a star 💫
+</div>
 
             </div>
 
