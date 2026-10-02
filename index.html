@@ -290,7 +290,13 @@ if ("serviceWorker" in navigator) {
 
             <div id="customMessageDisplay" class="hidden"></div>
 
-            <div id="proposalText" class="proposal-text"></div>
+            <div
+    id="proposalText"
+    class="proposal-text"
+    role="status"
+    aria-live="polite"
+    aria-atomic="true"
+></div>
 
         </div>
 
