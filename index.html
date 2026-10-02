@@ -435,13 +435,22 @@ if ("serviceWorker" in navigator) {
     Describe the feelings you'd like expressed.
 </small>
 
-  <select id="poemStyle">
+  <label for="poemStyle">🎨 Poem Style</label>
+
+<select
+    id="poemStyle"
+    aria-describedby="poemStyleHelp"
+>
     <option value="cute">💕 Cute</option>
     <option value="dreamy">🌙 Dreamy</option>
     <option value="emotional">💗 Emotional</option>
     <option value="funny">😊 Playful</option>
     <option value="simple">✨ Simple</option>
-  </select>
+</select>
+
+<small id="poemStyleHelp">
+    Choose the mood you want your poem to have.
+</small>
 
   <button type="button" onclick="generatePoem()">
     ✨ Generate My Poem
