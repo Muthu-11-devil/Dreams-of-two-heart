@@ -189,13 +189,31 @@ if ("serviceWorker" in navigator) {
 >
 
 <label for="years">How many years have you loved them?</label>
-<input id="years" type="number" min="0" step="0.1" placeholder="Example: 3">
+<input
+<small id="yearsHelp">
+    You can enter a number such as 1, 2.5, or 3.
+</small>
+    id="years"
+    type="number"
+    min="0"
+    step="0.1"
+    inputmode="decimal"
+    placeholder="Example: 3"
+    aria-describedby="yearsHelp"
+>
 
 <label for="firstLove">Is it your first love?</label>
-<select id="firstLove">
-            <option value="Yes">Yes ❤️</option>
-            <option value="No">No 💕</option>
-        </select>
+<select
+    id="firstLove"
+    aria-describedby="firstLoveHelp"
+>
+    <option value="Yes">Yes ❤️</option>
+    <option value="No">No 💕</option>
+</select>
+
+<small id="firstLoveHelp">
+    Choose the option that best describes your experience.
+</small>
 
         <label for="specialPhoto">📸 Special Photo</label>
 
@@ -234,11 +252,19 @@ if ("serviceWorker" in navigator) {
     Loading online templates...
 </div>
 
-        <div id="templateLibrary"></div>
+        <div
+    id="templateLibrary"
+    role="list"
+    aria-label="Available proposal templates"
+></div>
 
-        <button type="button" onclick="generateProposal()">
-            Generate Proposal ❤️
-        </button>
+        <button
+    type="button"
+    aria-label="Generate your personalized proposal"
+    onclick="generateProposal()"
+>
+    Generate Proposal ❤️
+</button>
 
     </section>
 
@@ -715,9 +741,14 @@ if ("serviceWorker" in navigator) {
 </button>
 
 </section>
-        <button class="another-button" onclick="location.reload()">
-            🔄 Generate Another
-        </button>
+        <button
+    type="button"
+    class="another-button"
+    aria-label="Start another proposal"
+    onclick="location.reload()"
+>
+    🔄 Generate Another
+</button>
 
     </section>
 
