@@ -199,10 +199,17 @@ if ("serviceWorker" in navigator) {
 </small>
 
 <label for="customMessage">💌 Personal Message</label>
+
 <textarea
     id="customMessage"
     placeholder="Write something special..."
+    maxlength="1000"
+    aria-describedby="messageHelp"
 ></textarea>
+
+<small id="messageHelp">
+    You can write up to 1000 characters.
+</small>
 
         <!-- ONLINE TEMPLATE LIBRARY -->
         <label>🎨 Choose a Proposal Template</label>
