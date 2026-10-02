@@ -250,9 +250,16 @@ if ("serviceWorker" in navigator) {
         <h2>💖 Love Meter</h2>
 
         <div class="love-meter">
-            <div id="scoreFill">
-                <span id="scoreNumber">0%</span>
-            </div>
+            <div
+    id="scoreFill"
+    role="progressbar"
+    aria-label="Love Meter"
+    aria-valuemin="0"
+    aria-valuemax="100"
+    aria-valuenow="0"
+>
+    <span id="scoreNumber">0%</span>
+</div>
         </div>
 
         <p
