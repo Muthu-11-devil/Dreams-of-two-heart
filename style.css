@@ -1289,3 +1289,13 @@ textarea:focus-visible,
     font-size: 13px;
     line-height: 1.5;
 }
+
+#poemMemoryHelp,
+#poemFeelingsHelp {
+    display: block;
+    margin-top: 7px;
+    margin-bottom: 12px;
+    color: var(--muted);
+    font-size: 13px;
+    line-height: 1.5;
+}
