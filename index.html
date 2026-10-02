@@ -277,9 +277,16 @@ if ("serviceWorker" in navigator) {
 
         <h2>💌 A Letter Awaits</h2>
 
-        <div id="envelope" onclick="openLetter()">
-            💌
-        </div>
+        <div
+    id="envelope"
+    role="button"
+    tabindex="0"
+    aria-label="Open your proposal letter"
+    onclick="openLetter()"
+    onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();openLetter()}"
+>
+    💌
+</div>
 
         <p>Tap the envelope to open your proposal</p>
 
