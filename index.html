@@ -424,7 +424,16 @@ if ("serviceWorker" in navigator) {
         ></textarea>
 
         <label for="capsuleDate">📅 Unlock date</label>
-        <input type="date" id="capsuleDate">
+
+<input
+    type="date"
+    id="capsuleDate"
+    aria-describedby="capsuleDateHelp"
+>
+
+<small id="capsuleDateHelp">
+    Choose the date when your time capsule can be opened.
+</small>
 
         <button type="button" onclick="sealTimeCapsule()">
             🔒 Seal My Time Capsule
