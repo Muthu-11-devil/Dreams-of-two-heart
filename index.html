@@ -386,7 +386,14 @@ if ("serviceWorker" in navigator) {
     ✨ Generate My Poem
   </button>
 
-  <div id="poemResult"></div>
+  <div
+    id="poemResult"
+    role="article"
+    aria-label="Your generated poem"
+    aria-live="polite"
+    aria-atomic="true"
+></div>
+
 </section>
 
 
