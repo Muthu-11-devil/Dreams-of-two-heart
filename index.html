@@ -401,20 +401,33 @@ if ("serviceWorker" in navigator) {
     <div id="capsuleForm">
 
         <label for="capsuleName">❤️ Name</label>
-        <input
-            type="text"
-            id="capsuleName"
-            placeholder="Enter a name"
-            maxlength="40"
-        >
 
-        <label for="capsuleMemory">🌸 A memory from today</label>
-        <input
-            type="text"
-            id="capsuleMemory"
-            placeholder="What do you want to remember?"
-            maxlength="150"
-        >
+<input
+    type="text"
+    id="capsuleName"
+    placeholder="Enter a name"
+    maxlength="40"
+    aria-describedby="capsuleNameHelp"
+>
+
+<small id="capsuleNameHelp">
+    Enter the name you want to associate with this memory.
+</small>
+
+
+<label for="capsuleMemory">🌸 A memory from today</label>
+
+<input
+    type="text"
+    id="capsuleMemory"
+    placeholder="What do you want to remember?"
+    maxlength="150"
+    aria-describedby="capsuleMemoryHelp"
+>
+
+<small id="capsuleMemoryHelp">
+    Write a short memory you want to keep.
+</small>
 
         <label for="capsuleMessage">💭 Your future message</label>
         <textarea
