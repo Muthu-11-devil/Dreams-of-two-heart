@@ -451,12 +451,29 @@ if ("serviceWorker" in navigator) {
 
             <div id="starSky">
 
-                <span onclick="starMessage(1)">⭐</span>
-                <span onclick="starMessage(2)">✨</span>
-                <span onclick="starMessage(3)">⭐</span>
-                <span onclick="starMessage(4)">🌟</span>
-                <span onclick="starMessage(5)">✨</span>
-                <span onclick="starMessage(6)">⭐</span>
+                <span role="button" tabindex="0" aria-label="Discover secret message 1"
+      onclick="starMessage(1)"
+      onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();starMessage(1)}">⭐</span>
+
+<span role="button" tabindex="0" aria-label="Discover secret message 2"
+      onclick="starMessage(2)"
+      onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();starMessage(2)}">✨</span>
+
+<span role="button" tabindex="0" aria-label="Discover secret message 3"
+      onclick="starMessage(3)"
+      onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();starMessage(3)}">⭐</span>
+
+<span role="button" tabindex="0" aria-label="Discover secret message 4"
+      onclick="starMessage(4)"
+      onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();starMessage(4)}">🌟</span>
+
+<span role="button" tabindex="0" aria-label="Discover secret message 5"
+      onclick="starMessage(5)"
+      onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();starMessage(5)}">✨</span>
+
+<span role="button" tabindex="0" aria-label="Discover secret message 6"
+      onclick="starMessage(6)"
+      onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();starMessage(6)}">⭐</span>
 
                 <div id="starMessage">
                     Tap a star 💫
