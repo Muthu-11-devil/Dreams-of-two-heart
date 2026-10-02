@@ -214,9 +214,13 @@ if ("serviceWorker" in navigator) {
         <!-- ONLINE TEMPLATE LIBRARY -->
         <label>🎨 Choose a Proposal Template</label>
 
-        <div id="templateStatus">
-            Loading online templates...
-        </div>
+        <div
+    id="templateStatus"
+    role="status"
+    aria-live="polite"
+>
+    Loading online templates...
+</div>
 
         <div id="templateLibrary"></div>
 
