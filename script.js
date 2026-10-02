@@ -171,6 +171,10 @@ function selectTemplate(id) {
             card.classList.remove(
                 "selected"
             );
+            selected.setAttribute(
+    "aria-selected",
+    "true"
+);
 
         });
 
