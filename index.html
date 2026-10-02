@@ -186,7 +186,17 @@ if ("serviceWorker" in navigator) {
         </select>
 
         <label for="specialPhoto">📸 Special Photo</label>
-<input id="specialPhoto" type="file" accept="image/*">
+
+<input
+    id="specialPhoto"
+    type="file"
+    accept="image/*"
+    aria-describedby="photoHelp"
+>
+
+<small id="photoHelp">
+    Choose an image from your device for your special memory.
+</small>
 
 <label for="customMessage">💌 Personal Message</label>
 <textarea
