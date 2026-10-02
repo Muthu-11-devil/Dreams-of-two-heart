@@ -97,11 +97,12 @@ function displayTemplates() {
         const card =
             document.createElement("div");
 
-        card.className =
-            "template-card";
-
-        card.dataset.id =
-            template.id;
+        card.setAttribute("role", "listitem");
+card.setAttribute("tabindex", "0");
+card.setAttribute(
+    "aria-label",
+    "Choose " + template.name + " proposal template"
+);
 
         card.innerHTML = `
             <div class="template-icon">
@@ -121,12 +122,28 @@ function displayTemplates() {
             template.preview;
 
         card.onclick =
-            function() {
+    function() {
 
-                selectTemplate(
-                    template.id
-                );
-            };
+        selectTemplate(
+            template.id
+        );
+    };
+
+card.onkeydown =
+    function(event) {
+
+        if (
+            event.key === "Enter" ||
+            event.key === " "
+        ) {
+
+            event.preventDefault();
+
+            selectTemplate(
+                template.id
+            );
+        }
+    };
 
         library.appendChild(card);
     });
