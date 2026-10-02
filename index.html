@@ -430,11 +430,17 @@ if ("serviceWorker" in navigator) {
 </small>
 
         <label for="capsuleMessage">💭 Your future message</label>
-        <textarea
-            id="capsuleMessage"
-            placeholder="Write something for your future self..."
-            maxlength="1000"
-        ></textarea>
+
+<textarea
+    id="capsuleMessage"
+    placeholder="Write something for your future self..."
+    maxlength="1000"
+    aria-describedby="capsuleMessageHelp"
+></textarea>
+
+<small id="capsuleMessageHelp">
+    Write a message for your future self. Maximum 1000 characters.
+</small>
 
         <label for="capsuleDate">📅 Unlock date</label>
 
