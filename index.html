@@ -410,11 +410,30 @@ if ("serviceWorker" in navigator) {
     Share what you appreciate about this person.
 </small>
 
-  <textarea id="poemMemory"
-            placeholder="A favorite memory"></textarea>
+  <label for="poemMemory">🌸 A Favorite Memory</label>
 
-  <textarea id="poemFeelings"
-            placeholder="How do you feel about them?"></textarea>
+<textarea
+    id="poemMemory"
+    placeholder="A favorite memory"
+    aria-describedby="poemMemoryHelp"
+></textarea>
+
+<small id="poemMemoryHelp">
+    Share a special memory you'd like reflected in the poem.
+</small>
+
+
+<label for="poemFeelings">💭 Your Feelings</label>
+
+<textarea
+    id="poemFeelings"
+    placeholder="How do you feel about them?"
+    aria-describedby="poemFeelingsHelp"
+></textarea>
+
+<small id="poemFeelingsHelp">
+    Describe the feelings you'd like expressed.
+</small>
 
   <select id="poemStyle">
     <option value="cute">💕 Cute</option>
