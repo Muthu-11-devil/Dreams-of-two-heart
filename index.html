@@ -637,44 +637,63 @@ if ("serviceWorker" in navigator) {
     
 </section>
 
+         <!-- LOVE STORY -->
+<section class="story-box">
 
-        <!-- LOVE STORY -->
-        <section class="story-box">
+    <h2>📖 Create Your Love Story</h2>
 
-            <h2>📖 Create Your Love Story</h2>
+    <label for="meetPlace">📍 Where did you meet?</label>
+    <input
+        id="meetPlace"
+        type="text"
+        placeholder="Where did you meet?"
+        aria-describedby="meetPlaceHelp"
+    >
+    <small id="meetPlaceHelp">
+        Tell us where your story began.
+    </small>
 
-            <input
-                id="meetPlace"
-                type="text"
-                placeholder="Where did you meet?"
-            >
+    <label for="favoriteMemory">🌸 Your favorite memory</label>
+    <input
+        id="favoriteMemory"
+        type="text"
+        placeholder="Your favorite memory"
+        aria-describedby="favoriteMemoryHelp"
+    >
+    <small id="favoriteMemoryHelp">
+        Share a special memory you'd like included.
+    </small>
 
-            <input
-                id="favoriteMemory"
-                type="text"
-                placeholder="Your favorite memory"
-            >
+    <label for="dreamPlace">🌎 Your dream destination</label>
+    <input
+        id="dreamPlace"
+        type="text"
+        placeholder="Your dream destination"
+        aria-describedby="dreamPlaceHelp"
+    >
+    <small id="dreamPlaceHelp">
+        Add a place you'd love to visit someday.
+    </small>
 
-            <input
-                id="dreamPlace"
-                type="text"
-                placeholder="Your dream destination"
-            >
+    <button
+        type="button"
+        aria-label="Create your love story"
+        onclick="generateLoveStory()"
+    >
+        Create My Story ✨
+    </button>
 
-            <button onclick="generateLoveStory()">
-                Create My Story ✨
-            </button>
+    <div
+        id="loveStory"
+        class="hidden"
+        role="article"
+        aria-label="Your generated love story"
+        aria-live="polite"
+        aria-atomic="true"
+    ></div>
 
-            <div
-    id="loveStory"
-    class="hidden"
-    role="article"
-    aria-label="Your generated love story"
-    aria-live="polite"
-    aria-atomic="true"
-></div>
+</section>
 
-        </section>
 
         <!-- LOVE SKY -->
         <section class="star-section">
