@@ -1,4 +1,4 @@
-const CACHE_NAME = "dreams-of-two-hearts-v5";
+const CACHE_NAME = "dreams-of-two-hearts-v6";
 
 const FILES_TO_CACHE = [
     "./",
