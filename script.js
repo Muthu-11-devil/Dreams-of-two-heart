@@ -1,4 +1,21 @@
 /* ==========================================
+   LANGUAGE SYSTEM
+========================================== */
+
+const currentLanguage = "en";
+
+const translations = {
+    en: {
+        appName: "Dreams of Two Hearts",
+        createExperience: "💌 Create Your Experience",
+        exploreFeatures: "✨ Explore Features",
+        generateProposal: "Generate Proposal ❤️",
+        downloadApp: "📱 Download Android App",
+        privacyPolicy: "🔒 Privacy Policy"
+    }
+};
+
+/* ==========================================
    ONLINE TEMPLATE LIBRARY
 ========================================== */
 
