@@ -1435,3 +1435,37 @@ function createNewMemory() {
         behavior: "smooth"
     });
 }
+
+// ==========================================
+// 🌍 LANGUAGE SELECTOR
+// ==========================================
+
+document.addEventListener("DOMContentLoaded", function () {
+    const languageSelect =
+        document.getElementById("languageSelect");
+
+    if (!languageSelect) {
+        return;
+    }
+
+    const savedLanguage =
+        localStorage.getItem("dreamsLanguage") || "en";
+
+    languageSelect.value = savedLanguage;
+
+    languageSelect.addEventListener("change", function () {
+        const language = languageSelect.value;
+
+        localStorage.setItem(
+            "dreamsLanguage",
+            language
+        );
+
+        alert(
+            "🌍 Language selected: " +
+            languageSelect.options[
+                languageSelect.selectedIndex
+            ].text
+        );
+    });
+});
