@@ -12,6 +12,42 @@ const translations = {
         generateProposal: "Generate Proposal ❤️",
         downloadApp: "📱 Download Android App",
         privacyPolicy: "🔒 Privacy Policy"
+    },
+
+    ta: {
+        appName: "இரு இதயங்களின் கனவுகள்",
+        createExperience: "💌 உங்கள் அனுபவத்தை உருவாக்குங்கள்",
+        exploreFeatures: "✨ அம்சங்களைப் பாருங்கள்",
+        generateProposal: "முன்மொழிவை உருவாக்குங்கள் ❤️",
+        downloadApp: "📱 Android செயலியைப் பதிவிறக்குங்கள்",
+        privacyPolicy: "🔒 தனியுரிமைக் கொள்கை"
+    },
+
+    hi: {
+        appName: "दो दिलों के सपने",
+        createExperience: "💌 अपना अनुभव बनाएँ",
+        exploreFeatures: "✨ सुविधाएँ देखें",
+        generateProposal: "प्रस्ताव बनाएँ ❤️",
+        downloadApp: "📱 Android ऐप डाउनलोड करें",
+        privacyPolicy: "🔒 गोपनीयता नीति"
+    },
+
+    es: {
+        appName: "Sueños de Dos Corazones",
+        createExperience: "💌 Crea Tu Experiencia",
+        exploreFeatures: "✨ Explora las Funciones",
+        generateProposal: "Crear Propuesta ❤️",
+        downloadApp: "📱 Descargar Aplicación Android",
+        privacyPolicy: "🔒 Política de Privacidad"
+    },
+
+    fr: {
+        appName: "Rêves de Deux Cœurs",
+        createExperience: "💌 Créez Votre Expérience",
+        exploreFeatures: "✨ Découvrir les Fonctionnalités",
+        generateProposal: "Créer une Proposition ❤️",
+        downloadApp: "📱 Télécharger l’Application Android",
+        privacyPolicy: "🔒 Politique de Confidentialité"
     }
 };
 
